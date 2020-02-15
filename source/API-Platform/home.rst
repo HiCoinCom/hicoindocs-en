@@ -1,12 +1,12 @@
-开发指南
-=========
-欢迎来到HiCoin开放平台，HiCoin开放平台基于HiCoin庞大的用户流量和安全的区块链钱包架构，将强大的支付功能和用户资源通过接口的方式提供给第三方合作伙伴，通过这种方式能帮助合作伙伴对接更多应用，使得其在市场上更具竞争力，同时也希望区块链技术应用到更多的领域。
+Guide to Development
+=========================
+Welcome to HiCoin open platform. Based on HiCoin’s huge user traffic and secure BlockChain wallet architecture, this platform provides powerful payment functions and user resources to third-party partners through various interfaces, which enables partners to connect more applications and make them more competitive in the market. We also hope to apply BlockChain technology to more fields.
 
-本资源旨在帮助开发者顺利对接到HiCoin平台，接下来我们将主要从三大方面来协助您：1）授权；2）用户支付；3）商户打款。
+This documentation resource aims to help developers successfully connect to the HiCoin platform. In the future, we will assist you in three major aspects: 1) authorization; 2) payment from users; 3) payment to merchants.
 
 .. toctree::
    :maxdepth: 2
-   :caption: 目录:
+   :caption: Content:
 
 	 前期准备<start>
     OAuth授权<oauth>

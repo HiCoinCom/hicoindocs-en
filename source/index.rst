@@ -10,13 +10,10 @@ HiCoin Docments
    :maxdepth: 3
    :caption: Content:
 
-   HiCoin Overview<Introduction/index>
-   Functions Overview<Functions/index>
-   Technical Framework Overview<Technology/index>
+   Overview of HiCoin<Introduction/index>
+   Overview of Functions<Functions/index>
+   Overview of Technical Architecture<Technology/index>
    Cooperation Process<DeliveryProcess/index>
-   Full Function Wallet Solution<Solution-FullFuctions/index>
-   Custodian Solution<Solution-Custody/index>
-   Payment Solution<Solution-Payment/index>
    Custody WaaS API Document<API-WaaS/index>
    Open API Document[new]<API-Platform/home>
    Document Center<Documents/index>

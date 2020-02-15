@@ -1,29 +1,29 @@
 
-技术架构概述
-======================
+Overview of Technical Architecture
+=========================================
 
-1 整体概述
---------------
+1 Overall Overview
+------------------------
 
-HiCoin定位是 **钱包技术平台** 。
+HiCoin is positioned as a **Wallet Technology Platform** 。
 
-**钱包** 意味着金融，所以我们整个系统按照国际金融体系标准（ISO27000,SOC,CC EAL4+,FIPS 140-2 level3等）来构建。
+**Wallet** means finance, so our entire system is built according to international financial system standards (ISO27000, SOC, CC EAL4 +, FIPS 140-2 level3, etc.).
 
-**技术平台** 意味着我们作为一个区块链的底层服务，除了需要在技术上面做到专业外，还需要具有极强的扩展性。HiCoin在技术上面采用 **五横一纵模块化** 策略，模块之间通过微服务进行低耦合动态扩展，同时我们提供了完整的 WaaS接口文档和开放平台文档，真实让钱包从业务形态上面平台化，让钱包作为一个基础服务不仅可以 **走出去** （集成到其它应用，像支付宝一样为其它应用提供支付或者是上链服务），也可以 **接进来** （其它应用像小程序一个集成到钱包中，打通帐户及资产划转）。
+**Technology Platform** means that we, as an underlying service provider of the Blockchain, need to be technically proficient with strong scalability. HiCoin technologically adopts the strategy of **Five Horizontal & One Vertical Modules** ，and enables low coupling dynamic expansion among modules through micro services. Meanwhile, we provide a full range of WaaS interface documents and open platform documents, which really makes the wallet become a platform for business activities, so that the wallet not only **Goes Out** （as a basic service (of being integrated into other applications, and providing payment or chain services for other applications, like what Alipay does), but also **Connects In** (other applications like applets are integrated into the wallet to open accounts and transfer assets).
 
-各端使用语言汇总：
+Summary of Programming Languages Used at Each End:
 
-:后端: Java （SpringCloud, RabbitMQ, Mysql, Redis, ）
+:Back End: Java （SpringCloud, RabbitMQ, Mysql, Redis, ）
 
-:前端: vue技术栈(vue-cli3.0结合webpack搭建的多站点框架), React
+:Front End: Vue technology stack (multi-site framework built by vue-cli3.0 and webpack), React
 
-:IOS客户端: Swift 为主要开发语言，采用MMVC模式，同时支持Object-C混编。
+:IOS Client: Swift is a main programming language, which adopts MMVC mode and also supports Object-C mixed programming .
 
-:Android客户端: Kotlin 为主要语言，采用MVP模式，同时支持Java混编。
+:Android Client: Kotlin is the main programming language, which adopts MVP mode and also supports Java mixed programming.
 
-:底层钱包: 基础不同主链使用语言而定 比如：go, python,C/C++ 等。
+:Underlying Wallet: t depends on the programming language used for different main chains, such as go, python, C / C + +.
 
-整体框架图：
+Overall Framework Diagram:：
 
 .. image:: images/tech_framework.png
    :width: 700px
@@ -32,16 +32,16 @@ HiCoin定位是 **钱包技术平台** 。
    :align: center
 
 
-2 整体技术框架
------------------------
+2 Overall Technical Framework
+------------------------------------
 
-HiCoin整体框架采用五横一纵模块化展开，做到模块之间低耦合、高并发、强鲁棒。
+The overall framework of HiCoin is expanded by adopting five horizontal and one vertical modules to enable low coupling, high concurrency and strong robust among modules.
 
-**五横** 是指将系统按不同业务属性从底向上分为：数据层、基础层、业务层、接入层、展示性。通过不同模块特性定制高并发策略，同时让不同层级及模块之间低耦合。
+**Five Horizontal Modules** means that the system is divided into five layers - data layer, base layer, business layer, access layer and display layer from bottom to top according to different business attributes. High concurrency strategy is customized based on different module features, and low coupling is enabled among different layers and modules.
 
-**一纵** 是指通过监控、路由、容灾、负载均衡等治理服务让五横更加稳定与鲁棒。
+**One Vertical Module** means to make the Five Horizontal Modules more stable and robust by monitoring, routing, disaster tolerance, load balancing and other governance services.
 
-如下图所示：
+It is shown in the figure below:
 
 .. image:: images/tech_framework_full.png
    :width: 700px
@@ -49,10 +49,10 @@ HiCoin整体框架采用五横一纵模块化展开，做到模块之间低耦�
    :scale: 100%
    :align: center
 
-3 服务器网络框架
------------------------
+3 Server Network Framework
+------------------------------------
 
-整个HiCoin的网络框架分为三个区域：**机房网络区** 、**负载均衡区** 、**计算资源区** 。整体架构采用同城双活机房，保证服务高可用，无单点故障，当访问压力超过指标后分钟及自动扩容，无需人工干预。同时通过虚拟专用网络(VPC)设置多个子网(Subnet)，子网之间设置安全互通策略。
+The whole HiCoin network framework is divided into three areas: **Computer Room Network Area** 、**Load Balancing Area** 、**Computing Resource Area** .The overall architecture is featured by local active-active computer rooms to ensure high availability of services and no failure of single points, and automatically expand capacity within one minute when the access pressure exceeds the target without manual intervention. In addition, multiple subnets are set up through VPC, and security interworking policies are set up among subnets.
 
 
 .. image:: images/tech_framework_network.png
@@ -62,9 +62,9 @@ HiCoin整体框架采用五横一纵模块化展开，做到模块之间低耦�
    :align: center
 
 
-4 30+项安全技术保障
----------------------------------
-HiCoin同时也与世界顶级区块链安全公司：Certik、降维、慢雾、成都链安、北京链安等深度合作，从用户、业务、系统三个大方向采用30+项安全技术保障来保障系统更加安全。
+4 Guarantee of More Than 30 Security Technologies
+----------------------------------------------------------
+HiCoin has in-depth cooperation with the world’s top blockchain security companies: Certik, Johnwick.io, SlowMist, Beosin, Chainsguard and adopts more than 30 security technologies by maining focusing on user, business and system to guarantee a more secure system.
 
 .. image:: images/tech_framework_securty.png
    :width: 700px
@@ -73,11 +73,4 @@ HiCoin同时也与世界顶级区块链安全公司：Certik、降维、慢雾�
    :align: center
 
 
-
-
-
-
-
-
-
-
+This article was proofread by Ryan.

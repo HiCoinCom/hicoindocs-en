@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-视频教程
+Videos
 ==============
 
 2.1 内部收付款视频
