@@ -1,42 +1,46 @@
 
-2.9 提现操作
-~~~~~~~~~~~~~~~~~~~~~~~~
-:说明: 提现操作,如果转入地址是我们的地址，则直接使用内部转账；否则使用之前的提现逻辑，即需要上链，审核走原有逻辑。
-:接口地址: /api/billing/withdraw
-:请求方式: POST
-:请求参数:
+2.9 Withdrawal interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:Note: If to_address is an internal address, the withdrawal interface functions the same as the internal transfer interface.
+:URI: /api/billing/withdraw
+:Method: POST
+:Request Parameters:
 
-============ ======= ======== =================================================
-param         type   是否必须   说明
-request_id    string 必填      请求唯一标识
-from_uid      string 必填      转出用户ID
-to_address    string 必填      转入用户地址
-amount        string 必填      提现金额,包含提现手续费；手续费需要在商户后台配置；内部转账不收取手续费
-symbol        string 必填      提现币种
-app_id        string 必填      商户的唯一标识
-focus_online  string 可选      1表示强制走链，不走内部转账; 0或者该字段为空，是否走内部转账会依据to_address来判断
-time          long   必填      时间戳
-sign          string 必填      签名
-============ ======= ======== =================================================
+=========== =========== =========== =========================================================
+Params	    Type	      Necessary	  Description
+request_id  string	    Y	          unique ID for each HTTP request
+from_uid    string	    Y	          from user id
+to_address  string	    Y	          withdrawal address
+amount      string	    Y	          transfer amount
+symbol      string      Y           symbol name
+app_id	    string	    Y	          app id
+time	      long	      Y	          timestamp
+sign	      string	    Y	          sign value
+=========== =========== =========== =========================================================
 
-**重点字段说明：**
+:Request Parameters:
 
-- amount: 手续费需要在商户后台配置；内部转账不收取手续费
-- focus_online: 1表示强制走链，不走内部转账; 0或者该字段为空，是否走内部转账会依据to_address来判断
+=========== =========== =========== =========================================================
+Params	    Type	      Necessary	  Description
+code	      string	    Y	          error code，0 means success
+msg         string      Y           error code description
+data	      json	      Y	          response data，status=0->success, status=1->failure
+=========== =========== =========== =========================================================
 
-:响应参数:
+:Data Structure:
 
-============== ======= ======== =================================================
-param          type    是否必须   说明
-status         string  必填      提现: 0 - 6 ；内部转账: 0,1。详见下面字段说明
-withdraw_type  int     是        1表示外部地址提现，2内部转账
-============== ======= ======== =================================================
+============== ======= =========== =================================================
+Params         Type    Necessary   Description
+status         string  Y           explained as follows
+withdraw_type  int     Y           1: withdraw, 2:Internal Transfer
+============== ======= =========== =================================================
 
-**重点字段说明：**
+**Note:**
 
-- status: 提现状态: 0 未审核，1 审核通过，2 审核拒绝，3 支付中已经打币，4 支付失败，5 已完成，6 已撤销 ；内部转账: 0成功，1失败
+withdraw_type=1, status: 0 Unreviewed, 1 Reviewed，2 Review Rejected，3 Processing，4 failture, 5 complete
+withdraw_type=2, status: 0 success, 1 failture
 
-:响应示例:
+:Response Samples:
 
 ::
 
@@ -45,5 +49,6 @@ withdraw_type  int     是        1表示外部地址提现，2内部转账
 	    "msg": "suc",
 	    "data": {
 		    "statuts": 0
+				"withdraw_type":1
 	    }
 	}

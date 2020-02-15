@@ -1,30 +1,29 @@
 
-2.6 获取用户指定币账户地址
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.6 Get User's Deposit Address
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:说明: 获取用户指定币账户地址。如果没有地址，则给用户分配一个地址，此时不应生成账户，账户还是按需生成。
-:接口地址: /api/account/getDepositAddress
-:请求方式: POST
-:请求参数:
+:URI: /api/account/getDepositAddress
+:Method: POST
+:Request Parameters:
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-uid	string	必填	用户ID
-symbol	string	必填	币种
-app_id	string	必填	商户的唯一标识
-time	long	必填	时间戳
-sign	string	必填	签名
-======= ======= ======== =================================================
+=========== =========== =========== =======================================
+Params	    Type	      Necessary	  Description
+uid	        string	    Y	          user id
+symbol      string      Y           symbol name
+app_id	    string	    Y	          app id
+time	      long	      Y	          timestamp
+sign	      string	    Y	          sign value
+=========== =========== =========== =======================================
 
-:响应参数:
+:Response Parameters:
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-uid	Int	必填	用户ID
-address	string	必填	币种账户地址
-======= ======= ======== =================================================
+================ =========== =========== =======================================
+Params	         Type	       Necessary	 Description
+uid              int         Y           user id
+address          string      Y           deposit address
+================ =========== =========== =======================================
 
-:响应示例:
+:Response Samples:
 
 ::
 

@@ -1,30 +1,29 @@
 
-2.5 获取用户所有币账户
-~~~~~~~~~~~~~~~~~~~~~~~~
+2.5 Get All Account Information of a User
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:说明: 根据用户ID查询用户所有币种的账户
-:接口地址: /api/account/getAllAccount
-:请求方式: GET
-:请求参数:
+:URI: /api/account/getAllAccount
+:Method: GET
+:Request Parameters:
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-uid	string	必填	用户ID
-app_id	string	必填	商户的唯一标识
-time	long	必填	时间戳
-sign	string	必填	签名
-======= ======= ======== =================================================
+=========== =========== =========== =======================================
+Params	    Type	      Necessary	  Description
+uid	        string	    Y	          user id
+app_id	    string	    Y	          app id
+time	      long	      Y	          timestamp
+sign	      string	    Y	          sign value
+=========== =========== =========== =======================================
 
-:响应参数:
+:Response Parameters:
 
-================ ======= ======== =================================================
-param            type    是否必须  说明
-symbol           string  必填      币种名称
-normal_balance   string  必填      正常余额
-lock_balance     string  必填      冻结余额
-================ ======= ======== =================================================
+================ =========== =========== =======================================
+Params	         Type	       Necessary	 Description
+symbol           string      Y           symbol name
+normal_balance   string      Y           balance of normal account
+lock_balance     string      Y           balance of lock account
+================ =========== =========== =======================================
 
-:响应示例:
+:Response Samples:
 
 ::
 

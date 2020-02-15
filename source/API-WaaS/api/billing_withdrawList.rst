@@ -1,53 +1,52 @@
 
-2.11 批量获取提现记录
-~~~~~~~~~~~~~~~~~~~~~~~~
-:说明: 批量获取提现记录
-:接口地址: /api/billing/withdrawList
-:请求方式: GET
-:请求参数:
+2.11 Batch Get Withdrawal Records
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-app_id	string	必填	商户的唯一标识
-time	long	必填	时间戳
-sign	string	必填	签名
-ids	string	必填	多个request_id使用逗号隔开，最多100个request_id
-======= ======= ======== =================================================
+:URL: /api/billing/withdrawList
+:Method: GET
+:Request Parameters:
 
-:响应参数:
+=========== =========== =========== ===================================================================================
+Params	    Type	      Necessary	  Description
+ids	        string	    Y	          multiple 'request_id' are separated by commas, up to 100 request_id
+app_id	    string	    Y	          app id
+time	      long	      Y	          timestamp
+sign	      string	    Y	          sign value
+=========== =========== =========== ===================================================================================
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-code	string	必填	
-msg	string	必填	
-data	json	必填	详见下方data响应参数说明
-======= ======= ======== =================================================
+:Request Parameters:
 
-:Data响应参数:
+=========== =========== =========== ============================================
+Params	    Type	      Necessary	  Description
+code	      string	    Y	          error code，0 means success
+msg         string      Y           error code description
+data	      json	      Y	          response data
+=========== =========== =========== ============================================
 
-===================== ======= ======== =================================================
-param                 type    是否必须  说明
-request_id            String  必填      请求id,
-id                    int     必填      提现id
-uid                   int     必填      提现用户id
-symbol                String  必填      币种
-amount                String  必填      提现金额
-withdraw_fee_symbol   String  必填      提现手续费币种
-withdraw_fee          String  必填      提现手续费
-fee_symbol            String  必填      挖矿手续费币种
-real_fee              String  必填      旷工费
-created_at            String  必填      创建时间,
-updated_at            String  必填      修改时间
-address_from          String  必填      来源地址
-address_to            String  必填      到账地址
-txid                  String  必填      区块链交易ID
-confirmations         int     必填      区块链确认数
-saas_status           int     必填      平台审核状态
-company_status        int     必填      商户审核状态
-status                int     必填      提现状态: 0 未审核，1 审核通过，2 审核拒绝，3 支付中已经打币，4 支付失败，5 已完成，6 已撤销 
-===================== ======= ======== =================================================
+:Data Structure:
 
-:响应示例:
+===================== =========== =========== ====================================================================================
+Params	              Type	      Necessary	  Description
+request_id            String      Y           unique ID for each HTTP request
+id                    int         Y           withdrawal record id
+uid                   int         Y           user id
+symbol                String      Y           symbol name
+amount                String      Y           withdrawal amount
+withdraw_fee_symbol   String      Y           withdrawal fees symbol
+withdraw_fee          String      Y           withdrawal fees
+fee_symbol            String      Y           mining symbol
+real_fee              String      Y           miner fee
+created_at            String      Y           created time
+updated_at            String      Y           updated time
+address_to            String      Y           withdrawal address
+txid                  String      Y           transaction id in blockchain
+confirmations         int         Y           confirmations in blockchain
+saas_status           int         Y           status of platform review
+company_status        int         Y           status of merchant review
+status                int         Y           0 Unreviewed, 1 Reviewed，2 Review Rejected，3 Processing，4 failture, 5 complete
+===================== =========== =========== ====================================================================================
+
+:Response Samples:
 
 ::
 
@@ -55,7 +54,7 @@ status                int     必填      提现状态: 0 未审核，1 审核�
 		"code": "0",
 		"msg": "suc",
 		"data": [
-			{ 
+			{
 				"request_id":"11",
 				"id": 123,
 				"uid"：2,
@@ -77,4 +76,3 @@ status                int     必填      提现状态: 0 未审核，1 审核�
 			}
 		]
 	}
-

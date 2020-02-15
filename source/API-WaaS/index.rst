@@ -1,24 +1,23 @@
 
-Custody) WaaS API Document
+Custody WaaS API Documentation
 ==============================================
 
 
-**Update records**
+**Version History**
 
-======= ============= ====== ===================================
-版本     日期          作者    描述
-V1.0    2019/03/13    罗斌    创建文档
-V1.1    2019/03/13    钟鹏华   接口错误码更新   
-V1.5    2019/07/17    罗斌     增加提现地址校验，更新错误
-======= ============= ====== ===================================
+======= ============= ============== ======================================================
+Vesion  Date          Author         Description
+V1.0    2019/03/13    Luo Bin        create document
+V1.1    2019/03/13    Zhong Penghua  update error code
+V1.5    2019/07/17    Luo Bin        withdrawal address verification, update error code
+======= ============= ============== ======================================================
 
 .. toctree::
    :maxdepth: 3
-   :caption: 目录:
+   :caption: Contents:
 
-	1 接口说明与规则<api_description>
-	2 接口文档<api/index>
-	3 域名及API密钥<api_domain_secret>
-	4 附录<api_note>
-	5 常见问题(FQA)<api_fqa>
-
+	1 Interface Description<api_description>
+	2 Api Documentation<api/index>
+	3 Domain And API Key<api_domain_secret>
+	4 Appendix<api_note>
+	5 FQA<api_fqa>

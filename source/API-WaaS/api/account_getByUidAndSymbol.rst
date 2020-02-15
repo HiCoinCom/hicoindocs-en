@@ -1,30 +1,30 @@
 
-2.4 获取用户指定币账户
-~~~~~~~~~~~~~~~~~~~~~~~~
+2.4 Get User Account Information by Symbol and Uid
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:说明: 根据币种及用户ID查询用户的账户
-:接口地址: /api/account/getByUidAndSymbol
-:请求方式: GET
-:请求参数:
+:URI: /api/account/getByUidAndSymbol
+:Method: GET
+:Request Parameters:
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-uid	string	必填	用户ID
-symbol	string	必填	币种
-app_id	string	必填	商户的唯一标识
-time	long	必填	当前时间戳
-sign	string	必填	签名
-======= ======= ======== =================================================
+=========== =========== =========== =======================================
+Params	    Type	      Necessary	  Description
+uid	        string	    Y	          user id
+symbol      string      Y           symbol name
+app_id	    string	    Y	          app id
+time	      long	      Y	          timestamp
+sign	      string	    Y	          sign value
+=========== =========== =========== =======================================
 
-:响应参数:
+:Response Parameters:
 
-================ ======= ======== =================================================
-param            type    是否必须  说明
-normal_balance   String  必填      正常账户余额
-lock_balance.    String  必填      冻结账户余额
-================ ======= ======== =================================================
+================ =========== =========== =======================================
+Params	         Type	       Necessary	 Description
+normal_balance   string      Y           balance of normal account
+lock_balance     string      Y           balance of lock account
+deposit_address  string      Y           deposit address
+================ =========== =========== =======================================
 
-:响应示例:
+:Response Samples:
 
 ::
 

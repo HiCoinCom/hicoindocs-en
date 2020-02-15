@@ -1,47 +1,46 @@
+2.12 Sync User's Deposit Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-2.12 同步充值记录
-~~~~~~~~~~~~~~~~~~~~~~~~
+:URI: /api/billing/syncDepositList
+:Method: GET
+:Request Parameters:
 
-:说明: 同步充值记录
-:接口地址: /api/billing/syncDepositList
-:请求方式: GET
-:请求参数:
-
-======= ======= ======== =================================================
-param	type	是否必须	说明
-app_id	string	必填	商户的唯一标识
-time	long	必填	时间戳
-sign	string	必填	签名
-max_id	int	必填	返回大于id的100条充值记录数据
-======= ======= ======== =================================================
-
-:响应参数:
-
-======= ======= ======== =================================================
-param	type	是否必须	说明
-code	string	必填	
-msg	string	必填	
-data	json	必填	详见下方data响应参数说明
-======= ======= ======== =================================================
-
-:Data响应参数:
-
-===================== ======= ======== =================================================
-param                 type    是否必须  说明
-id                    int     必填      充值唯一id
-uid                   int     必填      充值 用户id
-symbol                String  必填      币种
-amount                String  必填      充值金额
-created_at            String  必填      创建时间,
-updated_at            String  必填      修改时间
-txid                  String  必填      区块链交易ID
-confirmations         int     必填      区块链确认数
-address_to            String  必填      充值到帐地址
-status                int     必填      0待确认，1 已完成，2 异常
-===================== ======= ======== =================================================
+=========== =========== =========== =========================================================
+Params	    Type	      Necessary	  Description
+max_id	    string	    Y	          The maximum id of the data returned by the last request
+app_id	    string	    Y	          app id
+time	      long	      Y	          timestamp
+sign	      string	    Y	          sign value
+=========== =========== =========== =========================================================
 
 
-:响应示例:
+:Request Parameters:
+
+=========== =========== =========== ============================================
+Params	    Type	      Necessary	  Description
+code	      string	    Y	          error code，0 means success
+msg         string      Y           error code description
+data	      json	      Y	          response data
+=========== =========== =========== ============================================
+
+:Data Structure:
+
+============== =========== =========== ==================================================================================
+Params         Type        Necessary   Description
+id             int         Y           deposit record id
+uid            int         Y           user id
+symbol         String      Y           symbol name
+amount         String      Y           deposit amount
+created_at     String      Y           create time
+updated_at     String      Y           update time
+txid           String      Y           transaction id in blockchain
+confirmations  int         Y           confirmations in blockchain
+address_to     String      Y           deposit address
+status         int         Y           deposit status, 0:waiting for confirmation，1: complete 2: failure
+============== =========== =========== ==================================================================================
+
+
+:Response Samples:
 
 ::
 

@@ -1,29 +1,30 @@
 
-2.10 获取支持的币列表
-~~~~~~~~~~~~~~~~~~~~~~~~
+2.10 Get a List of Supported Coins
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:说明: 获取商户的币种列表
-:接口地址: /api/user/getCoinList
-:请求方式: GET
-:请求参数:
+:URI: /api/user/getCoinList
+:Method: GET
+:Request Parameters:
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-app_id	string	必填	商户的唯一标识
-time	long	必填	时间戳
-sign	string	必填	签名
-======= ======= ======== =================================================
+=========== =========== =========== =======================================
+Params	    Type	      Necessary	  Description
+uid	        string	    Y	          user id
+app_id	    string	    Y	          app id
+time	      long	      Y	          timestamp
+sign	      string	    Y	          sign value
+=========== =========== =========== =======================================
 
-:响应参数:
+:Request Parameters:
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-code	string	必填	0：成功,其他:失败
-msg	string	必填	
-data	json	必填	symbol:币种名称;icon：币种icon
-======= ======= ======== =================================================
+=========== =========== =========== ============================================
+Params	    Type	      Necessary	  Description
+code	      string	    Y	          error code，0 means success
+msg         string      Y           error code description
+data	      json	      Y	          response data
+=========== =========== =========== ============================================
 
-:响应示例:
+:Response Samples:
+
 
 ::
 
@@ -33,7 +34,7 @@ data	json	必填	symbol:币种名称;icon：币种icon
 	    "data": [
 	        {
 	            "symbol"："BTC"
-	             "icon": "https://hicoinvip.oss-cn-beijing.aliyuncs.com/saas/1547519554925.png"
+	            "icon": "https://hicoinvip.oss-cn-beijing.aliyuncs.com/saas/1547519554925.png"
 	       }
 	    ]
 	}

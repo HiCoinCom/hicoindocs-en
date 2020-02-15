@@ -1,43 +1,42 @@
 
-2.14 批量获取内部用户转账记录
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.14 Batch Get Internal Transfer Records
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:说明: 批量获取内部用户转账记录
-:接口地址: /api/billing/transferList
-:请求方式: GET
-:请求参数:
+:URI: /api/billing/transferList
+:Method: GET
+:Request Parameters:
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-app_id	string	必填	商户的唯一标识
-time	long	必填	时间戳
-sign	string	必填	签名
-ids	string	必填	多个request_id使用逗号隔开，最多100个id
-======= ======= ======== =================================================
+=========== =========== =========== ===================================================================================
+Params	    Type	      Necessary	  Description
+ids	        string	    Y	          multiple 'request_id' are separated by commas, up to 100 request_id
+app_id	    string	    Y	          app id
+time	      long	      Y	          timestamp
+sign	      string	    Y	          sign value
+=========== =========== =========== ===================================================================================
 
-:响应参数:
+:Request Parameters:
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-code	string	必填	
-msg	string	必填	
-data	json	必填	详见下方data响应参数说明
-======= ======= ======== =================================================
+=========== =========== =========== ============================================
+Params	    Type	      Necessary	  Description
+code	      string	    Y	          error code，0 means success
+msg         string      Y           error code description
+data	      json	      Y	          response data
+=========== =========== =========== ============================================
 
-:Data响应参数:
+:Data Structure:
 
-===================== ======= ======== =================================================
-param                 type    是否必须  说明
-request_id            String  必填      请求id
-uid                   int     必填      用户id
-symbol                String  必填      币种
-amount                String  必填      充值金额
-created_at            String  必填      创建时间,
-updated_at            String  必填      修改时间
-from_uid              int.    必填      来源uid
-to_uid                int     必填      转出uid
-status                int     必填      0成功，1 失败
-===================== ======= ======== =================================================
+===================== =========== ============ =================================================
+Params                Type        Necessary    说明
+request_id            String      Y            unique ID for each HTTP request
+id                    int         Y             system transfer id
+symbol                String      Y            symbol name
+amount                String      Y            deposit amount
+created_at            String      Y            created time
+updated_at            String      Y            updated time
+from_uid              int         Y            from uid
+to_uid                int         Y            to uid
+status                int         Y            0:success, 1:failure
+===================== =========== ============ =================================================
 
 
 :响应示例:
@@ -48,9 +47,9 @@ status                int     必填      0成功，1 失败
 		"code": "0",
 		"msg": "suc",
 		"data":[
-			{  
+			{
 				"request_id":"11",
-				  "id": 1,
+				"id": 1,
 				"symbol" ："ETH",
 				"amount"："0.0002000000000000",
 				"created_at": 1545273830000,
@@ -61,5 +60,3 @@ status                int     必填      0成功，1 失败
 			}
 		]
 	}
-
-

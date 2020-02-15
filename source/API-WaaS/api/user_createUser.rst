@@ -1,29 +1,29 @@
 
-2.1 用户手机注册
-~~~~~~~~~~~~~~~~~~~~~~~~
+2.1 Phone Registration Interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:说明: 注册成为钱包的用户。
-:接口地址: api/user/createUser
-:请求方式: POST
-:请求参数:
+:URI: api/user/createUser
+:Method: POST
+:Request Parameters:
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-country	string	必填	国家编号，如：86表示中国
-mobile	string	必填	手机号
-app_id	string	必填	商户的唯一标识
-time	long	必填	当前时间戳
-sign	string	必填	签名
-======= ======= ======== =================================================
+=========== =========== =========== ============================================================
+Params	    Type	      Necessary	  Description
+country	    string	    Y	          country code, For example, the Chinese country code uses 86
+mobile      string      Y           phone number
+app_id	    string	    Y	          app id
+time	      long	      Y	          timestamp
+sign	      string	    Y	          sign value
+=========== =========== =========== ============================================================
 
-:响应参数:
+:Response Parameters:
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-uid	int	必填	用户在钱包服务的唯一标识
-======= ======= ======== =================================================
+================ =========== =========== =======================================
+Params	         Type	       Necessary	 Description
+uid              string      Y           user id
+================ =========== =========== =======================================
 
-:响应示例:
+
+:Response Samples:
 
 ::
 

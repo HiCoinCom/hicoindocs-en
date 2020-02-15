@@ -1,21 +1,22 @@
-1 接口描述
-====================
-1.1 接口说明与规则
+1 Interface Description
+========================
+
+1.1 Introduction
 -------------------
 
-文档为钱包服务对第三方应用提供的接口。
+The document is the interface provided by the wallet service to third-party applications.
 
 .. image:: images/apiopen-instructions.png
-   :width: 586px
+   :width: 450px
    :height: 153px
    :align: center
 
-以下文档中的接口提供方称为 **钱包服务**，接口调用方称为 **第三方应用**。
+The interface providers are called wallet services and the interface callers are called third-party applications in the following documents.
 
-1.2 接口规则
---------------
-:传输方式: https(测试环境暂时使用 http)
-:签名字段: 除了 sign 字段，其他所有必填项都需要参与签名 
-:响应状态码为: 0,表示处理成功，非 0 表示请求错误或系统异常 
-:请求地址: 域名+接口地址
-:签名算法: 详见附 1
+1.2 Interface Rules
+---------------------------------
+
+:Transfer Protocol: HTTPS is recommended for production environments, but HTTP protocols are required for test environments
+:Signature Rules: in addition to the 'sign' parameter, other request parameters must be signed
+:Response Status Code: 0 means success, non-zero means request error or system exception
+:Signature Algorithm: please refer to Appendix

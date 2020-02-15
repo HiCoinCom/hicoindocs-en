@@ -1,34 +1,34 @@
 
-2.7 内部用户转账
-~~~~~~~~~~~~~~~~~~~~~~~~
+2.7 Internal Transfer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:说明: 内部用户转账
-:接口地址: /api/billing/userTransfer
-:请求方式: POST
-:请求参数:
+:Note: No fees for internal transfers
+:URI: /api/billing/userTransfer
+:Method: POST
+:Request Parameters:
 
-============ ======= ======== =================================================
-param        type    是否必须   说明
-request_id   string  必填      请求唯一标识
-from_uid     string  必填      转出用户ID
-to_uid       string  必填      转入用户ID
-amount       string  必填      转账金额
-symbol       string  必填      转账币种
-app_id       string  必填      商户的唯一标识
-time         long    必填      时间戳
-sign         string  必填      签名
-============ ======= ======== =================================================
+=========== =========== =========== =========================================================
+Params	    Type	      Necessary	  Description
+request_id  string	    Y	          unique ID for each HTTP request
+from_uid    string	    Y	          from user id
+to_uid      string	    Y	          to user id
+amount      string	    Y	          transfer amount
+symbol      string      Y           symbol name
+app_id	    string	    Y	          app id
+time	      long	      Y	          timestamp
+sign	      string	    Y	          sign value
+=========== =========== =========== =========================================================
 
-:响应参数:
+:Request Parameters:
 
-======= ======= ======== =================================================
-param	type	是否必须	说明
-code	string	必填	0：成功,其他:失败
-msg	string	必填	
-data	string	必填	status=0转账成功，status=1表示失败
-======= ======= ======== =================================================
+=========== =========== =========== =========================================================
+Params	    Type	      Necessary	  Description
+code	      string	    Y	          error code，0 means success
+msg         string      Y           error code description
+data	      json	      Y	          response data，status=0->success, status=1->failure
+=========== =========== =========== =========================================================
 
-:响应示例:
+:Response Samples:
 
 ::
 

@@ -1,62 +1,60 @@
 
-4 附录
+4 Appendix
 ==========
-附 1:签名算法
-~~~~~~~~~~~~~~~~~~~~~~~~
+Signature Algorithm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-签名生成的通用步骤如下:
+:Step One: After the request parameters are sorted by dictionary, then they are stitched into a string in the form of key1=value1&key2=value2. stringA = [key1=value1&key2=value2...]
 
-:第一步: 设所有发送或者接收到的数据为集合 M，将集合 M 内非空参数值的参 数按照参数名 ASCII 码从小到大排序(字典序)，使用 URL 键值对的格式(即 key1=value1&key2=value2...)拼接成字符串 stringA。
+**Note**:
 
-**特别注意以下重要规则**:
+- Sort the dictionary from smallest to largest according to the parameter name.
+- If the value of the parameter is empty, it does not participate in the signature.
+- Note the case of parameter names.
+- The request parameter 'sign' doesn't need to be spliced to the signature string.
 
-- 参数名 ASCII 码从小到大排序(字典序);
-- 如果参数的值为空不参与签名;
-- 参数名区分大小写;
-- 验证调用返回时，传送的 sign 参数不参与签名，将生成的签名与该 sign 值作校验。
+:Step Two: sign = md5(stringA + app_secret), stringA is the signature string in the first step.
 
-:第二步: 对 stringA 进行 md5，得到 sign 值 signValue
 
-**注**: 参与签名参数为，公共参数 + 接口参数
-
-附 2:接口错误码表
+Error Code
 ~~~~~~~~~~~~~~~~~~~~~~~~
 ======  ==================================================================
 code	msg
-0	    成功
-100001	系统错误
-100004	请求参数不合法
-100005	签名校验失败
-100007	非法IP
-100015	商户ID无效
-100016	商户信息过期
-110004	用户被冻结不可提现
-110023	手机号已注册
-110055	提现地址错误
-110065	请求用户用户不存在（获取用户余额、提现或转账时用到）
-110078	提现或转账金额小于最小转出金额（后台配置最小金额，暂时不支持）
-110087	提现或转账金额大于最大转出金额（后台配置最大金额，暂时不支持）
-110088	请勿重复提交请求
-110089	注册手机号不正确
-110101	用户注册失败
-120202	币种不支持
-120402	提现或转账余额不足
-120403	提现手续费余额不足
-120404	提现或转账金额太小, 小于等于手续费
+0	    Success
+100001	system error
+100004  request parameter is invalid
+100005	signature verification failed
+100007	illegal IP
+100015	invalid CompanyID
+100016	company information is out of date
+110004	user account is frozen and withdrawal fails
+110023	phone number is registered
+110055	withdrawal address error
+110065	not exist this user
+110078	withdrawal or transfer amount is less than the minimum amount（not support）
+110087	withdrawal or transfer amount is greater than the maximum transfer amount（not support）
+110088	please do not submit the same API request repeatedly
+110089	phone number is incorrect
+110101	registration failed
+120202	not support this symbol
+120402	insufficient withdrawal or transfer amount
+120403	insufficient withdrawal fee
+120404	withdrawal or transfer amount is less than or equal to the fee
 ======  ==================================================================
 
-附 3:接口测试
+
+Example
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-6.3.1 测试参数
+4.1 Test Parameters
 ************************
 
 :app_id: 16a9f17fc2ad61ca4339fdd6a8a37f21
 :app_secret: 4dedb14fae76dae682de02e671eac408
-:地址: http://awstestopenapi.hicoin.one/api/user/createUser
+:URL: http://awstestopenapi.hicoin.one/api/user/createUser
 
-6.3.2 Java签名示例代码
-************************
+4.2 Sample Code about Signature in Java
+****************************************
 
 ::
 
@@ -77,17 +75,17 @@ code	msg
 	public class SignTest {
 
 	    /**
-	     * 测试
+	     * main function
 	     */
 	    public static void main(String[] args) {
-	        /** 请求参数，其中api_key,secret_key需要分配*/
+	        /** api_key,secret_key */
 	        String appId = "16a9f17fc2ad61ca4339fdd6a8a37f21";
 	        String appSecret = "4dedb14fae76dae682de02e671eac408";
-	        String country = "+86";
+	        String country = "86";
 	        String mobile= "15004648456";
 	        String time = "1551325752";
 
-	        /** 封装需要签名的参数 */
+	        /** package parameters */
 	        TreeMap<String, String> params = new TreeMap<>();
 	        params.put("app_id", appId);
 	        params.put("country", country);
@@ -97,28 +95,27 @@ code	msg
 	        String sign = openApiSign(params, appSecret);
 	        params.put("sign", sign);
 
-	        /** http请求 */
+	        /** http request */
 	        String resultJson = post("http://awstestopenapi.hicoin.one/api/user/createUser", params);
 	        System.out.println(resultJson);
 	    }
 
 	    /**
-	     * 获取参数签名
+	     * Signature Algorithm
 	     * @param params
 	     * @param appSecret
 	     * @return
 	     */
 	    public static String openApiSign(TreeMap<String, String> params, String appSecret){
-	        /** 拼接签名字符串，md5签名 */
 	        StringBuilder result = new StringBuilder();
 	        Set<Map.Entry<String, String>> entrys = params.entrySet();
 	        for (Map.Entry<String, String> param : entrys) {
-	            /** 去掉签名字段 */
+	            /** remove 'sign' param */
 	            if(param.getKey().equals("sign")){
 	                continue;
 	            }
 
-	            /** 空参数不参与签名 */
+	            /** remove empty string */
 	            if(param.getValue()!=null) {
 	                result.append("&").append(param.getKey()).append("=").append(param.getValue().toString());
 	            }
@@ -128,10 +125,9 @@ code	msg
 	        return getMD5(signTemp);
 	    }
 	    /**
-	     * 通过post来提交数据，带参数的方法
-	     *
-	     * @param url 请求地址
-	     * @param params 参数
+	     * post request
+	     * @param url
+	     * @param params
 	     * @return
 	     */
 	    public static String post(String url, Map<String, String> params) {
@@ -140,7 +136,6 @@ code	msg
 	        try {
 	            HttpClient client = new HttpClient();
 	            PostMethod method = new PostMethod(url);
-	            //设定请求头的样式
 	            method.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
 	            if (params != null && params.size() > 0) {
 	                for (Map.Entry<String, String> entry : params.entrySet()) {
@@ -162,10 +157,10 @@ code	msg
 
 
 	    /**
-	     * 获取String的MD5值
+	     * md5 string
 	     *
-	     * @param info 字符串
-	     * @return 该字符串的MD5值
+	     * @param info
+	     * @return
 	     */
 	    public static String getMD5(String info) {
 	        try {
@@ -185,7 +180,7 @@ code	msg
 	        for (int i = 0; i < md5Array.length; i++) {
 	            int temp = 0xff & md5Array[i];
 	            String hexString = Integer.toHexString(temp);
-	            if (hexString.length() == 1) {//如果是十六进制的0f，默认只显示f，此时要补上0
+	            if (hexString.length() == 1) {
 	                strBuilder.append("0").append(hexString);
 	            } else {
 	                strBuilder.append(hexString);
@@ -196,15 +191,15 @@ code	msg
 
 
 
-6.3.2 PHP签名示例代码
-************************
+4.3 Sample Code about Signature in PHP
+***********************************************************
 
 ::
 
 	/**
-	 * openApi 签名
-	 * @param array $params 请求参数
-	 * @param $secretKey app_id对应的app_secret
+	 * Signature Algorithm
+	 * @param array $params
+	 * @param $secretKey
 	 * @return string
 	 */
 	function openApiSign(array $params, $secretKey){

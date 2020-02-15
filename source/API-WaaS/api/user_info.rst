@@ -1,31 +1,31 @@
 
-2.3 查询用户信息
-~~~~~~~~~~~~~~~~~~~~~~~~
+2.3 Querying User's Information
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:说明: 查询用户信息。
-:接口地址: api/user/info
-:请求方式:  GET
-:请求参数:
+:URI: api/user/info
+:Method:  GET
+:Request Parameters:
 
-======= ======= ======== ======================================================================
-param	type	是否必须	说明
-country	string	可选	国家编号，mobile不为空时，该字段必填。如：+86；
-mobile	string	可选	手机号，手机和邮箱需要保证其中之一不能为空
-email	string	可选	邮箱，手机和邮箱需要保证其中之一不能为空
-app_id	string	必填	商户的唯一标识
-time	long	必填	当前时间戳
-sign	string	必填	签名
-======= ======= ======== ======================================================================
+=========== =========== =========== ============================================================
+Params	    Type	      Necessary	  Description
+country	    string	    N	          country code, For example, the Chinese country code uses 86
+mobile      string      N           phone number
+email       string      N           email
+app_id	    string	    Y	          app id
+time	      long	      Y	          timestamp
+sign	      string	    Y	          sign value
+=========== =========== =========== ============================================================
 
-:响应参数:
+:Response Parameters:
 
-========== ======= ======== =================================================
-param       type   是否必须   说明
-uid         int    必填       用户在钱包服务的唯一标识
-nickname    string 必填       用户昵称
-========== ======= ======== =================================================
+================ =========== =========== =======================================
+Params	         Type	       Necessary	 Description
+uid              string      Y           user id
+nickname         string      Y           user's nickname
+================ =========== =========== =======================================
 
-:响应示例:
+
+:Response Samples:
 
 ::
 
