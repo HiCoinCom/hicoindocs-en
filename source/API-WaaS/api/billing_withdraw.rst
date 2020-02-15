@@ -1,5 +1,5 @@
 
-2.9 Withdrawal interface
+2.9 Withdrawal Interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 :Note: If to_address is an internal address, the withdrawal interface functions the same as the internal transfer interface.
 :URI: /api/billing/withdraw
