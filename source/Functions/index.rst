@@ -32,3 +32,6 @@ Functions of Background Management System(Base on 201909)
    :height: 1668px
    :scale: 100%
    :align: center
+
+
+This article was proofread by Ryan.

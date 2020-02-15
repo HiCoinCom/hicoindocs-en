@@ -73,11 +73,4 @@ HiCoin has in-depth cooperation with the world’s top blockchain security compa
    :align: center
 
 
-
-
-
-
-
-
-
-
+This article was proofread by Ryan.

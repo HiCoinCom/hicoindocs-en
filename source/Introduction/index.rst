@@ -29,3 +29,6 @@ By utilizing the open platform and application plug-ins, HiCoin enables connecti
 
 
 As to security, we provide a range of safeguard solutions which include more than 30 defense mechanisms such as three-tier wallet system, DDoS defense, and flow cleaning, based on the mature data risk assessment experience of 100 partners and the top risk control system.
+
+
+This article was proofread by Ryan.
