@@ -3,13 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-功能概述
-==========
+Overview of Functions
+=============================
 
-30+功能模块，200+功能点
---------------------------
+More Than 30 Functional Modules, With More Than 200 Functional Points
+----------------------------------------------------------------------------------------
 
-HiCoin基于海量的客户需求，研发了三大钱包系统：云端钱包（中心化钱包），HD钱包（去中心化钱包）及EOS 钱包（去中心化EOS钱包），同时汇总了30+功能模块，200+功能点，以下为用户可见常用模块与功能展示图：
+Based on massive customer demands, HiCoin developes three major wallet systems, namely the cloud wallet (centralized wallet), HD wallet (decentralized wallet) and EOS wallet (decentralized EOS wallet), as well as integrates more than 30 functional modules and more than 200 functional points. The following is the common module and function display diagram visible to users:
 
 .. image:: images/functions_modules.png
    :width: 1738px
@@ -17,16 +17,16 @@ HiCoin基于海量的客户需求，研发了三大钱包系统：云端钱包�
    :scale: 100%
    :align: center
 
-APP功能点(基于2.3.1版本)
---------------------------------
+Functions of APP(Base on 2.3.1)
+-------------------------------------------
 .. image:: images/functions_app.png
    :width: 859px
    :height: 2970px
    :scale: 100%
    :align: center
 
-后台功能点(基于201909版本)
---------------------------------
+Functions of Background Management System(Base on 201909)
+-------------------------------------------------------------------
 .. image:: images/functions_background.png
    :width: 859px
    :height: 1668px

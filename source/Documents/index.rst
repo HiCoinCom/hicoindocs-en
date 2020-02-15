@@ -3,12 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-文档中心
-==============
+Document Center
+====================
 
 .. toctree::
    :maxdepth: 3
-   :caption: 目录:
+   :caption: Content:
 
-	1 下载文档<download_docs>
-  	2 视频教程<videos>
+	1 Download<download_docs>
+  	2 Videos<videos>
