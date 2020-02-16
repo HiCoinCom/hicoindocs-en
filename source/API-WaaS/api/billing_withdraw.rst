@@ -48,7 +48,7 @@ withdraw_type=2, status: 0 success, 1 failture
 	    "code": "0",
 	    "msg": "suc",
 	    "data": {
-		    "statuts": 0
+		    "status": 0
 				"withdraw_type":1
 	    }
 	}

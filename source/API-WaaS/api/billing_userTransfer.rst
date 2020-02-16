@@ -36,6 +36,6 @@ data	      json	      Y	          response data，status=0->success, status=1->f
 	    "code": "0",
 	    "msg": "suc",
 	    "data": {
-		    "statuts": 0
+		    "status": 0
 	    }
 	}
