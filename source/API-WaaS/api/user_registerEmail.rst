@@ -7,7 +7,7 @@
 :Request Parameters:
 
 =========== =========== =========== ============================================================
-Params	    Type	      Required	  Description
+Params	    Type        Required	  Description
 email       string      Y           email
 app_id	    string	    Y	          app id
 time	      long	      Y	          timestamp
@@ -17,7 +17,7 @@ sign	      string	    Y	          sign value
 :Response Parameters:
 
 ================ =========== =========== =======================================
-Params	         Type	       Required	   Description
+Params           Type	       Required	   Description
 uid              string      Y           user id
 ================ =========== =========== =======================================
 

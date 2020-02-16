@@ -15,7 +15,7 @@
 	2.6 Get User's Deposit Address<account_getDepositAddress>
 	2.7 Internal Transfer<billing_userTransfer>
 	2.8 System Transfer<billing_systemTransfer>
-	2.9 Withdrawal interface<billing_withdraw>
+	2.9 Withdrawal Interface<billing_withdraw>
 	2.10 Get a List of Supported Coins<user_getCoinList>
 	2.11 Batch Get Withdrawal Records<billing_withdrawList>
 	2.12 Sync User's Deposit Data<billing_syncDepositList>

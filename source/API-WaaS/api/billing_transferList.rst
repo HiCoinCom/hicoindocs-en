@@ -7,17 +7,17 @@
 :Request Parameters:
 
 =========== =========== =========== ===================================================================================
-Params	    Type	      Required	  Description
+Params	    Type        Required	  Description
 ids	        string	    Y	          multiple 'request_id' are separated by commas, up to 100 request_id
 app_id	    string	    Y	          app id
 time	      long	      Y	          timestamp
 sign	      string	    Y	          sign value
 =========== =========== =========== ===================================================================================
 
-:Request Parameters:
+:Response Parameters:
 
 =========== =========== =========== ============================================
-Params	    Type	      Required	  Description
+Params	    Type        Required	  Description
 code	      string	    Y	          error code，0 means success
 msg         string      Y           error code description
 data	      json	      Y	          response data
@@ -39,7 +39,7 @@ status                int         Y            0:success, 1:failure
 ===================== =========== ============ =================================================
 
 
-:响应示例:
+:Response Samples:
 
 ::
 

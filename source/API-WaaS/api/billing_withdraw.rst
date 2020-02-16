@@ -7,7 +7,7 @@
 :Request Parameters:
 
 =========== =========== =========== =========================================================
-Params	    Type	      Required	  Description
+Params	    Type        Required	  Description
 request_id  string	    Y	          unique ID for each HTTP request
 from_uid    string	    Y	          from user id
 to_address  string	    Y	          withdrawal address
@@ -18,10 +18,10 @@ time	      long	      Y	          timestamp
 sign	      string	    Y	          sign value
 =========== =========== =========== =========================================================
 
-:Request Parameters:
+:Response Parameters:
 
 =========== =========== =========== =========================================================
-Params	    Type	      Required	  Description
+Params	    Type        Required	  Description
 code	      string	    Y	          error code，0 means success
 msg         string      Y           error code description
 data	      json	      Y	          response data，status=0->success, status=1->failure
