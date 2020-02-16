@@ -7,7 +7,7 @@
 :Request Parameters:
 
 =========== =========== =========== ============================================================
-Params	    Type	      Necessary	  Description
+Params	    Type	      Required	  Description
 country	    string	    Y	          country code, For example, the Chinese country code uses 86
 mobile      string      Y           phone number
 app_id	    string	    Y	          app id
@@ -18,7 +18,7 @@ sign	      string	    Y	          sign value
 :Response Parameters:
 
 ================ =========== =========== =======================================
-Params	         Type	       Necessary	 Description
+Params	         Type	       Required 	 Description
 uid              string      Y           user id
 ================ =========== =========== =======================================
 

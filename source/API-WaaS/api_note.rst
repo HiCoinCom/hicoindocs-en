@@ -10,7 +10,7 @@ Signature Algorithm
 
 - Sort the dictionary from smallest to largest according to the parameter name.
 - If the value of the parameter is empty, it does not participate in the signature.
-- Note the case of parameter names.
+- Parameter names are case sensitive.
 - The request parameter 'sign' doesn't need to be spliced to the signature string.
 
 :Step Two: sign = md5(stringA + app_secret), stringA is the signature string in the first step.

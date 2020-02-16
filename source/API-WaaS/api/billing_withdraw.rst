@@ -7,7 +7,7 @@
 :Request Parameters:
 
 =========== =========== =========== =========================================================
-Params	    Type	      Necessary	  Description
+Params	    Type	      Required	  Description
 request_id  string	    Y	          unique ID for each HTTP request
 from_uid    string	    Y	          from user id
 to_address  string	    Y	          withdrawal address
@@ -21,7 +21,7 @@ sign	      string	    Y	          sign value
 :Request Parameters:
 
 =========== =========== =========== =========================================================
-Params	    Type	      Necessary	  Description
+Params	    Type	      Required	  Description
 code	      string	    Y	          error code，0 means success
 msg         string      Y           error code description
 data	      json	      Y	          response data，status=0->success, status=1->failure
@@ -30,7 +30,7 @@ data	      json	      Y	          response data，status=0->success, status=1->f
 :Data Structure:
 
 ============== ======= =========== =================================================
-Params         Type    Necessary   Description
+Params         Type    Required    Description
 status         string  Y           explained as follows
 withdraw_type  int     Y           1: withdraw, 2:Internal Transfer
 ============== ======= =========== =================================================

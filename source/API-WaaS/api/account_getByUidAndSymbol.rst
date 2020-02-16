@@ -7,7 +7,7 @@
 :Request Parameters:
 
 =========== =========== =========== =======================================
-Params	    Type	      Necessary	  Description
+Params	    Type	      Required 	  Description
 uid	        string	    Y	          user id
 symbol      string      Y           symbol name
 app_id	    string	    Y	          app id
@@ -18,7 +18,7 @@ sign	      string	    Y	          sign value
 :Response Parameters:
 
 ================ =========== =========== =======================================
-Params	         Type	       Necessary	 Description
+Params	         Type	       Required 	 Description
 normal_balance   string      Y           balance of normal account
 lock_balance     string      Y           balance of lock account
 deposit_address  string      Y           deposit address

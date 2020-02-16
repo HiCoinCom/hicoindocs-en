@@ -6,7 +6,7 @@
 :Request Parameters:
 
 =========== =========== =========== =========================================================
-Params	    Type	      Necessary	  Description
+Params	    Type	      Required	  Description
 ids	        string	    Y	          multiple 'id' are separated by commas, up to 100 id
 app_id	    string	    Y	          app id
 time	      long	      Y	          timestamp
@@ -17,7 +17,7 @@ sign	      string	    Y	          sign value
 :Request Parameters:
 
 =========== =========== =========== ============================================
-Params	    Type	      Necessary	  Description
+Params	    Type	      Required	  Description
 code	      string	    Y	          error code，0 means success
 msg         string      Y           error code description
 data	      json	      Y	          response data
@@ -26,7 +26,7 @@ data	      json	      Y	          response data
 :Data Structure:
 
 ============== =========== =========== ==================================================================================
-Params         Type        Necessary   Description
+Params         Type        Required    Description
 id             int         Y           deposit record id
 uid            int         Y           user id
 symbol         String      Y           symbol name
