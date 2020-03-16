@@ -22,3 +22,5 @@
 	2.13 Batch Get Deposit Records<billing_depositList>
 	2.14 Batch Get Internal Transfer Records<billing_transferList>
 	2.15 Batch Get System Transfer Records<billing_systemTransferList>
+  2.16 Asynchronous Callback Notification of Deposit Results<billing_notifyDeposit>
+  2.17 Asynchronous Callback Notification of Deposit Results<billing_notifyDeposit>
