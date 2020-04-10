@@ -7,9 +7,9 @@ Custody WaaS API Documentation
 
 ======= ============= ============== ======================================================
 Vesion  Date          Author         Description
-V1.0    2019/03/13    Luo Bin        create document
-V1.1    2019/03/13    Zhong Penghua  update error code
-V1.5    2019/07/17    Luo Bin        withdrawal address verification, update error code
+V1.0    2019/03/13    LB        create document
+V1.1    2019/03/13    PH  update error code
+V1.5    2019/07/17    LB        withdrawal address verification, update error code
 ======= ============= ============== ======================================================
 
 .. toctree::
