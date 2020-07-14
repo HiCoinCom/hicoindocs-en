@@ -10,11 +10,11 @@ HiCoin Docments
    :maxdepth: 3
    :caption: Content:
 
-   Overview of HiCoin<Introduction/index>
-   Overview of Functions<Functions/index>
-   Overview of Technical Architecture<Technology/index>
-   Cooperation Process<DeliveryProcess/index>
-   Custody WaaS API Document<API-WaaS/index>
+   HiCoin<Introduction/index>
+   Features<Functions/index>
+   Tec Structure<Technology/index>
+   Integration<DeliveryProcess/index>
+   Custody WaaS API Doc V2<API-WaaS-V2/index>
    Open API Document[new]<API-Platform/home>
    Document Center<Documents/index>
    FQA<FQA/index>
