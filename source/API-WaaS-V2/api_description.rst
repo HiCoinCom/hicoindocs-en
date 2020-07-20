@@ -7,9 +7,9 @@
 1）Two Sets of Public & private Key Need
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The first set of public and private keys: The developer shall generate the first set of public and private key before opening an Asset Account. The public key (rsa_third_pub) will be provided to the platform and the private key need to be kept by yourself. Since the private key is the only proof for the third-party application to access into the wallet service, please do not disclose to anyone. When a third party sends a wallet service request, the parameter is encrypted by the private key, the platform will decrypt the request data by the public key provided (rsa_third_pub).
+**The first set of public and private keys**: The developer shall generate the first set of public and private key before opening an Asset Account. The public key (rsa_third_pub) will be provided to the platform and the private key need to be kept by yourself. Since the private key is the only proof for the third-party application to access into the wallet service, please do not disclose to anyone. When a third party sends a wallet service request, the parameter is encrypted by the private key, the platform will decrypt the request data by the public key provided (rsa_third_pub).
 
-The second set of public and private keys: the platform will provide the wallet public key (RSA_wallet_pub) to the developer after they opens the asset account. The public key is required to be used for decryption when the third-party application receives the response data or asynchronous notification from the wallet
+**The second set of public and private keys**: the platform will provide the wallet public key (RSA_wallet_pub) to the developer after they opens the asset account. The public key is required to be used for decryption when the third-party application receives the response data or asynchronous notification from the wallet
 
 2）Why need to confirm the withdrawal twice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
