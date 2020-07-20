@@ -21,7 +21,19 @@ In order to confirm the request is legitimate applied by a third party when it i
 1.2 Prepare the account
 -------------------
 
-The developer needs to prepare: 1) Generate a set of public and private keys to provide the public key only to the platform; 2) IP of third-party application server; 3) Deposit and withdrawal callback notification address; 4) Confirm the address of withdrawal for the second time; 5) Whether to turn on the automatic collection features. Once turn it on, the system will automatically transfer the user's prepaid funds to the merchant collection account. Contact customer service of the platform to provide the above five listed information. The platform will setup your Assets Management Account as well as the 1) The unique identity of the merchant: app_id; 2) Wallet public key: rsa_wallet_pub.
+The developer needs to prepare: 
+
+1) Generate a set of public and private keys to provide the public key only to the platform; 
+
+2) IP of third-party application server; 
+
+3) Deposit and withdrawal callback notification address; 
+
+4) Confirm the address of withdrawal for the second time; 
+
+5) Whether to turn on the automatic collection features. Once turn it on, the system will automatically transfer the user's prepaid funds to the merchant collection account. 
+
+Contact customer service of the platform to provide the above five listed information. The platform will setup your Assets Management Account as well as the 1) The unique identity of the merchant: app_id; 2) Wallet public key: rsa_wallet_pub.
 
 
 1.3 Introduction

@@ -2,7 +2,8 @@
 托管(Custody) WaaS API文档 V2
 ==============================================
 
-欢迎来到HiCoin资产托管平台，HiCoin资产托管平台基于深厚的底层钱包技术和安全的区块链钱包架构，将强大的资产托管功通过接口的方式提供给第三方合作伙伴。通过这种方式能帮助合作伙伴在关注于核心业务发展的同时也能确保资产的安全。
+Thanks for visiting HiCoin Digital Asset Custody Platform！
+HiCoin digital asset custody platform has been developed with the highest level of security, which offers comprehensive reporting services to facilitate efficient and transparent management of your digital asset holdings with deep underlying wallet technology and architecture. We aim to remain at the forefront of cybersecurity and offer a global, standardized, resilient, insured and compliant custody service for the safekeeping of all our clients with incomparable user experience.
 
 
 .. toctree::
