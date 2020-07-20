@@ -33,7 +33,11 @@ The developer needs to prepare:
 
 5) Whether to turn on the automatic collection features. Once turn it on, the system will automatically transfer the user's prepaid funds to the merchant collection account. 
 
-Contact customer service of the platform to provide the above five listed information. The platform will setup your Assets Management Account as well as the 1) The unique identity of the merchant: app_id; 2) Wallet public key: rsa_wallet_pub.
+Contact customer service of the platform to provide the above five listed information. The platform will setup your Assets Management Account as well as the 
+
+1) The unique identity of the merchant: app_id; 
+
+2) Wallet public key: rsa_wallet_pub.
 
 
 1.3 Introduction
