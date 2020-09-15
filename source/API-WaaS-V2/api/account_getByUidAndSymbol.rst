@@ -2,10 +2,9 @@
 2.5 Get User Account Information by Symbol and Uid
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:URI: /api/account/getByUidAndSymbol
+:URI: /api/v2/account/getByUidAndSymbol
 :Method: GET
 :Request Parameters:
-
 =========== =========== =========== =====================================================================================================================
 Params	    Type        Required 	  Description
 app_id      String      Y           app id
@@ -13,7 +12,6 @@ data        String      Y           The request parameters after encryption and 
 =========== =========== =========== =====================================================================================================================
 
 :Data Structure After Request Parameter Data Decryption:
-
 =========== =========== =========== ============================================
 Params	    Type         Required   Description
 time        long         Y          timestamp
@@ -23,9 +21,7 @@ uid         String       Y          user id
 symbol      String       Y          symbol
 =========== =========== =========== ============================================
 
-
-
-:Request of Parameter Example:
+:Example of Request Parameter:
 
 ::
 

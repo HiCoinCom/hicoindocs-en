@@ -11,7 +11,7 @@ HiCoin digital asset custody platform has been developed with the highest level 
    :caption: Content:
 
 	1 Preparation<api_description>
-	2 Interface Doc<api/index>
+	2 Api Documentation<api/index>
 	3 Domain/API<api_domain_secret>
 	4 Appendix<api_note>
 	5 FQA<api_fqa>
