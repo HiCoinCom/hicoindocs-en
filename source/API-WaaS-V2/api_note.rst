@@ -2,10 +2,10 @@
 4 Appendix
 ==============
 
-Appendix 1 : Encryption and decryption 
+Appendix 1 : Encryption and decryption
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The values of the request parameter data and response field data are the result of RSA encryption and base64urlsafe encryption. 
+The values of the request parameter data and response field data are the result of RSA encryption and base64urlsafe encryption.
 
 *Attention*
 
@@ -357,7 +357,7 @@ The values of the request parameter data and response field data are the result 
 
 
 
-附 2:接口错误码表
+Appendix 2 : Error Code
 ~~~~~~~~~~~~~~~~~~~~~~~~
 ======  ==================================================================
 code	msg
