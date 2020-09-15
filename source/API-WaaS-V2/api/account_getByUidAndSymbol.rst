@@ -5,6 +5,7 @@
 :URI: /api/v2/account/getByUidAndSymbol
 :Method: GET
 :Request Parameters:
+
 =========== =========== =========== =====================================================================================================================
 Params	    Type        Required 	  Description
 app_id      String      Y           app id
@@ -12,6 +13,7 @@ data        String      Y           The request parameters after encryption and 
 =========== =========== =========== =====================================================================================================================
 
 :Data Structure After Request Parameter Data Decryption:
+
 =========== =========== =========== ============================================
 Params	    Type         Required   Description
 time        long         Y          timestamp
