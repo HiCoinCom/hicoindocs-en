@@ -1,5 +1,5 @@
 
-托管(Custody) WaaS API文档 V2
+Custody WaaS API Documentation V2
 ==============================================
 
 Thanks for visiting HiCoin Digital Asset Custody Platform！

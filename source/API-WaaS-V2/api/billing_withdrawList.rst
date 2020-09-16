@@ -64,7 +64,7 @@ txid                  String      Y           transaction id in blockchain
 confirmations         int         Y           confirmations in blockchain
 saas_status           int         Y           status of platform review
 company_status        int         Y           status of merchant review
-status                int         Y           0 Unreviewed, 1 Reviewed，2 Review Rejected，3 Processing，4 failture, 5 complete
+status                int         Y           0 Unreviewed, 1 Reviewed，2 Review Rejected，3 Processing，4 failure, 5 complete
 ===================== =========== =========== ====================================================================================
 
 

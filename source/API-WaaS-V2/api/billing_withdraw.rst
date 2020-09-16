@@ -59,8 +59,8 @@ withdraw_type  int     Y           1: withdraw, 2:Internal Transfer
 
 **Note:**
 
-withdraw_type=1, status: 0 Unreviewed, 1 Reviewed，2 Review Rejected，3 Processing，4 failture, 5 complete
-withdraw_type=2, status: 0 success, 1 failture
+withdraw_type=1, status: 0 Unreviewed, 1 Reviewed，2 Review Rejected，3 Processing，4 failure, 5 complete;
+withdraw_type=2, status: 0 success, 1 failure
 
 
 :Example of Response Data:
