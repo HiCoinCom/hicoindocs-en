@@ -3,7 +3,7 @@
 ==============
 
 Appendix 1 : Encryption and decryption
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The values of the request parameter data and response field data are the result of RSA encryption and base64urlsafe encryption.
 
@@ -358,27 +358,28 @@ The values of the request parameter data and response field data are the result 
 
 
 Appendix 2 : Error Code
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ======  ==================================================================
-code	msg
-0	    成功
-100001	系统错误
-100004	请求参数不合法
-100005	签名校验失败
-100007	非法IP
-100015	商户ID无效
-100016	商户信息过期
-110004	用户被冻结不可提现
-110023	手机号已注册
-110055	提现地址错误
-110065	请求用户用户不存在（获取用户余额、提现或转账时用到）
-110078	提现或转账金额小于最小转出金额（后台配置最小金额，暂时不支持）
-110087	提现或转账金额大于最大转出金额（后台配置最大金额，暂时不支持）
-110088	请勿重复提交请求
-110089	注册手机号不正确
-110101	用户注册失败
-120202	币种不支持
-120402	提现或转账余额不足
-120403	提现手续费余额不足
-120404	提现或转账金额太小, 小于等于手续费
+code	  msg
+0	      Success
+100001	system error
+100004  request parameter is invalid
+100005	signature verification failed
+100007	illegal IP
+100015	invalid CompanyID
+100016	company information is out of date
+110004	user account is frozen and withdrawal fails
+110023	phone number is registered
+110055	withdrawal address error
+110065	not exist this user
+110078	withdrawal or transfer amount is less than the minimum amount（not support）
+110087	withdrawal or transfer amount is greater than the maximum transfer amount（not support）
+110088	please do not submit the same API request repeatedly
+110089	phone number is incorrect
+110101	registration failed
+120202	not support this symbol
+120402	insufficient withdrawal or transfer amount
+120403	insufficient withdrawal fee
+120404	withdrawal or transfer amount is less than or equal to the fee
 ======  ==================================================================
