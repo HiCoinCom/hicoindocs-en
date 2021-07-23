@@ -29,13 +29,13 @@ Method 2：Use WeChat to scan the code to open the link to download:
 ~~~~~~~~~~~~~~~~~~~
 Open the [Hicoin] app and register the [Cloud Wallet] account (register when the unregistered account is logged in), which supports email and mobile phone number
 
-.. image:: images/api_plan_zhucezhanghao.jpg
+.. image:: images/api_plan_zhucezhanghao.png
    :width: 180px
    :align: center
 
 
 
-.. image:: images/api_plan_zhucezhanghao2.jpg
+.. image:: images/api_plan_zhucezhanghao2.png
    :width: 180px
    :align: center
 
@@ -67,7 +67,7 @@ Complete [Security Level] and [Google Identity Certifier] (Security Level 2 requ
 
 Open the WAAS platform (waas.chainup.com or costody.chainup.com) in the browser, scan the QR code and log in using the [Hicoin] app on the home page or the [scan] function of the cloud wallet
 
-.. image:: images/api_plan_saomadenglu.jpg
+.. image:: images/api_plan_saomadenglu.png
    :width: 800px
    :align: center
 
@@ -77,7 +77,7 @@ Open the WAAS platform (waas.chainup.com or costody.chainup.com) in the browser,
 
 Enter the 【WAAS Alliance】 page and create the wallet (the name of the wallet does not support modification, please fill in carefully).
 
-.. image:: images/api_plan_chuangjianqianbao1.jpg
+.. image:: images/api_plan_chuangjianqianbao1.png
    :width: 800px
    :align: center
 
@@ -88,7 +88,7 @@ Before opening the currency, please contact the platform to open the main chain 
 
 After opening currency, enter the wallet and click "Currency Management" to search for currency
 
-.. image:: images/api_plan_bizhongguanli.jpg
+.. image:: images/api_plan_bizhongguanli.png
    :width: 800px
    :align: center
 
