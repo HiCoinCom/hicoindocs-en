@@ -35,7 +35,7 @@ When the wallet service receives a request from a third-party application, in or
 4）Domain name and API key (API mode)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:Production domain name (test environment not supported): https://openapi.hicoin.vip
+:Production domain name (test environment not supported) : https://openapi.hicoin.vip
 :app_id: Please get it after creating the wallet
 :rsa_wallet_pub: Waas system public key; Please create the wallet and get it from the WAAS system
 :rsa_third_prv: Client private key; Independent generation and preservation
