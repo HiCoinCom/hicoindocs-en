@@ -1,218 +1,258 @@
 
-4 Appendix
-==============
+3 Appendix
+==========
 
-Appendix 1 : Encryption and decryption
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Attachment 1:Encryption and Decryption Mode
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-The values of the request parameter data and response field data are the result of RSA encryption and base64urlsafe encryption.
+The values of the request parameter DATA and the response field DATA are both encrypted by RSA and encrypted by **base64urlsafe**
 
-*Attention*
+*Matters needing attention*
 
-1）In traditional base64 encoding “+” and “ /” will be directly escaped by URL, so if we want to transfer these encoded strings through URL, we need to do traditional Base64 encoding first, then replace “+ ”and “/ ” to be “-_ ”characters respectively, and do the opposite action decoding at the receiving end
+1）There are two symbols + and/that are escaped directly by URL in Base64 traditional encoding. Therefore, if we want to transfer these encoded strings through URL, we need to do traditional Base64 encoding first, then replace + and/with two characters - _ respectively, and do the opposite action decoding at the receiving end
 
-2）rsa encryption and decryption using segment encryption
+2) Java Demo ： https://github.com/HiCoinCom/WaaSDemo
+
+3）RSA encryption and decryption using segmented encryption
 
 :Example of request parameter encryption:
 
 ::
 
-	 // Origin data
+	 // Raw request parameters
 	 String originReqData = '{"charset":"utf-8","symbol":"eth","sign":"","time":"1586420916306","app_id":"baaceb1e506e1b5d7d1f0a3b1622583b","version":"2.0"}'
 
-	 // encryptByPrivate方法封装在下列公共类RSAHelper.java中
-	 String encryptReqData = RSAHelper.encryptByPrivate(originReqData, "第三方自己的私钥")
+	 // The encryptByPrivate method is encapsulated in the following public class, RSAHelper.java
+	 String encryptReqData = RSAHelper.encryptByPrivate(originReqData, "third party its own private key")
 
 	 //http post
 	 String httpBuildParams = "app_id=baaceb1e506e1b5d7d1f0a3b1622583b&data=" + encryptReqData
 
 
 
-:响应数据解密示例:
+:Response data decryption example:
 
 ::
 
-	// 响应的原始数据
+	// Raw data for the response
   String originResp= '{"data":"jwtkGrhh2EVJS8xe93MpUYd-SQ-TyK0Bx5sXjE4hygFNg4wmctiahtIYXRpR2j8yDaEF5YzVstnUKbOH2p44FSMjXMQU4qFrhD00WOfW7v4LNALyiQXRb_5sakR0Zf573lGfLRTPlzLtTho3gqu3hMwuAv5e3r2dpb6_jxh1Z9BjkzSsNRX_bjLcHLUOPhMvo6rTUKSa9LQ6QnT8RX0eqzOZPlnCw3TeX_zcWWjxp6fcpKcdODxoI86gHwWRpSd-2qbEbFcaT12CJd9nPXA0KnLPNNHWz8sxQGiAg7Jg_-cN_yBHL9cS15zecTemYGqpOXRkojM1JwLsjM-7txf_dw"}'
 
-	// 解密响应数据
+	// Decrypt response data
 	String encryptRespData = JSON.parse(originResp)['data']
-	// decryptByPublic 方法封装在下列公共类 RSAHelper.java中
-  String decryptRespData = RSAHelper.decryptByPublic( encryptRespData, "托管平台提供的公钥" )
+	// decryptByPublic is encapsulated in the following public class RSAHelper.java
+  String decryptRespData = RSAHelper.decryptByPublic( encryptRespData, "hosting platform provides the public key" )
 
 
-:公共类RSAHelper.java:
+:Public class RSAHelper.java:
 
 ::
 
-	import org.apache.commons.codec.binary.Base64;
-	import org.apache.commons.lang3.StringUtils;
 
-	import sun.misc.BASE64Decoder;
-	import sun.misc.BASE64Encoder;
-	import sun.security.rsa.RSAPrivateCrtKeyImpl;
+	import java.io.ByteArrayOutputStream;
+	import java.security.Key;
+	import java.security.KeyFactory;
+	import java.security.spec.PKCS8EncodedKeySpec;
+	import java.security.spec.X509EncodedKeySpec;
+	import java.util.Base64;
+	import java.util.Base64.Decoder;
+	import java.util.Base64.Encoder;
 
 	import javax.crypto.Cipher;
-	import java.io.ByteArrayOutputStream;
-	import java.security.*;
-	import java.security.interfaces.RSAPrivateKey;
-	import java.security.interfaces.RSAPublicKey;
-	import java.security.spec.PKCS8EncodedKeySpec;
-	import java.security.spec.RSAPublicKeySpec;
-	import java.security.spec.X509EncodedKeySpec;
-	import java.util.*;
 
-	@SuppressWarnings("restriction")
 	public class RSAHelper {
 		/**
-		 * 加密算法RSA
-		 */
-		public static final String KEY_ALGORITHM = "RSA";
+	     * Encryption algorithm RSA
+	     */
+	    public static final String KEY_ALGORITHM = "RSA";
 
-		/** *//**
-		 * RSA最大加密明文大小
-		 */
-		private static final int MAX_ENCRYPT_BLOCK = 234;
+	    /** *//**
+	     * RSA maximum encryption plaintext size
+	     */
+	    private static final int MAX_ENCRYPT_BLOCK = 234;
 
-		/** *//**
-		 * RSA最大解密密文大小
-		 */
-		private static final int MAX_DECRYPT_BLOCK = 256;
-
-
-		private static final String CHARSET ="UTF-8";
+	    /** *//**
+	     * RSA maximum decrypted ciphertext size
+	     */
+	    private static final int MAX_DECRYPT_BLOCK = 256;
 
 
-
-		/**
-		 * 公钥解密
-		 *
-		 * @param encryptedData 已加密数据
-		 * @param publicKey 公钥(BASE64编码)
-		 * @return
-		 * @throws Exception
-		 */
-		public static byte[] decryptByPublicKey(byte[] encryptedData, String publicKey)
-				throws Exception {
-			byte[] keyBytes =  (new BASE64Decoder()).decodeBuffer(publicKey);
-			X509EncodedKeySpec x509KeySpec = new X509EncodedKeySpec(keyBytes);
-			KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM);
-			Key publicK = keyFactory.generatePublic(x509KeySpec);
-			Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
-			cipher.init(Cipher.DECRYPT_MODE, publicK);
-			int inputLen = encryptedData.length;
-			ByteArrayOutputStream out = new ByteArrayOutputStream();
-			int offSet = 0;
-			byte[] cache;
-			int i = 0;
-			// 对数据分段解密
-			while (inputLen - offSet > 0) {
-				if (inputLen - offSet > MAX_DECRYPT_BLOCK) {
-					cache = cipher.doFinal(encryptedData, offSet, MAX_DECRYPT_BLOCK);
-				} else {
-					cache = cipher.doFinal(encryptedData, offSet, inputLen - offSet);
-				}
-				out.write(cache, 0, cache.length);
-				i++;
-				offSet = i * MAX_DECRYPT_BLOCK;
-			}
-			byte[] decryptedData = out.toByteArray();
-			out.close();
-			return decryptedData;
-		}
-
-		/**
-		 *  公钥分段解密
-		 * @param encryptedData 加密的base64数据
-		 * @param publicKey rsa 公钥
-		 * @return
-		 */
-		public static String decryptByPublicKey(String encryptedData, String publicKey){
-			if(StringUtils.isBlank(encryptedData) || StringUtils.isBlank(publicKey)){
-				return "";
-			}
-
-			try {
-			    encryptedData = encryptedData.replace("\r", "").replace("\n", "");
-	            Base64 decoder = new Base64(true);
-				byte[] data = decryptByPublicKey(decoder.decode(encryptedData), publicKey);
-				if(data == null || data.length < 1){
-					return  "";
-				}
-				return new String(data);
-			}catch (Exception ex){
-				ex.printStackTrace();
-			}
-			return "";
-		}
-
-		/**
-		 * 私钥加密
-		 *
-		 * @param data 源数据
-		 * @param privateKey 私钥(BASE64编码)
-		 * @return
-		 * @throws Exception
-		 */
-		public static byte[] encryptByPrivateKey(byte[] data, String privateKey)
-				throws Exception {
-			byte[] keyBytes =  (new BASE64Decoder()).decodeBuffer(privateKey);
-			PKCS8EncodedKeySpec pkcs8KeySpec = new PKCS8EncodedKeySpec(keyBytes);
-			KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM);
-			Key privateK = keyFactory.generatePrivate(pkcs8KeySpec);
-			Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
-			cipher.init(Cipher.ENCRYPT_MODE, privateK);
-			int inputLen = data.length;
-			ByteArrayOutputStream out = new ByteArrayOutputStream();
-			int offSet = 0;
-			byte[] cache;
-			int i = 0;
-			// 对数据分段加密
-			while (inputLen - offSet > 0) {
-				if (inputLen - offSet > MAX_ENCRYPT_BLOCK) {
-					cache = cipher.doFinal(data, offSet, MAX_ENCRYPT_BLOCK);
-				} else {
-					cache = cipher.doFinal(data, offSet, inputLen - offSet);
-				}
-				out.write(cache, 0, cache.length);
-				i++;
-				offSet = i * MAX_ENCRYPT_BLOCK;
-			}
-			byte[] encryptedData = out.toByteArray();
-			out.close();
-			return encryptedData;
-		}
-
-		/**
-		 *  私钥分段加密数据
-		 * @param data 待加密数据
-		 * @param privateKey  私钥
-		 * @return
-		 */
-		public static String encryptByPrivateKey(String data, String privateKey){
-			if(StringUtils.isBlank(data) || StringUtils.isBlank(privateKey)){
-				return "";
-			}
-
-			try {
-				byte[] encryptedData = encryptByPrivateKey(data.getBytes("UTF-8"), privateKey);
-				if(encryptedData == null || encryptedData.length < 1){
-					return  "";
-				}
-
-	            Base64 encoder = new Base64(true);
-	            byte[] dataBytes = encoder.encode(encryptedData);
-	            return new String(dataBytes).replace("\r", "").replace("\n", "");
-			}catch (Exception ex){
-				ex.printStackTrace();
-			}
-			return "";
-		}
-
-  }
+	    private static final String CHARSET ="UTF-8";
 
 
-:PHP签名Demo:
+
+	    /**
+	     * Public key decryption
+	     *
+	     * @param encryptedData encrypted data
+	     * @param publicKey publicKey (Base64 encoding)
+	     * @return
+	     * @throws Exception
+	     */
+	    public static byte[] decryptByPublicKey(byte[] encryptedData, String publicKey)
+	                    throws Exception {
+	            byte[] keyBytes =  decryptBASE64(publicKey);
+	            X509EncodedKeySpec x509KeySpec = new X509EncodedKeySpec(keyBytes);
+	            KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM);
+	            Key publicK = keyFactory.generatePublic(x509KeySpec);
+	            Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
+	            cipher.init(Cipher.DECRYPT_MODE, publicK);
+	            int inputLen = encryptedData.length;
+	            ByteArrayOutputStream out = new ByteArrayOutputStream();
+	            int offSet = 0;
+	            byte[] cache;
+	            int i = 0;
+	            // Decrypt the data piecewise
+	            while (inputLen - offSet > 0) {
+	                    if (inputLen - offSet > MAX_DECRYPT_BLOCK) {
+	                            cache = cipher.doFinal(encryptedData, offSet, MAX_DECRYPT_BLOCK);
+	                    } else {
+	                            cache = cipher.doFinal(encryptedData, offSet, inputLen - offSet);
+	                    }
+	                    out.write(cache, 0, cache.length);
+	                    i++;
+	                    offSet = i * MAX_DECRYPT_BLOCK;
+	            }
+	            byte[] decryptedData = out.toByteArray();
+	            out.close();
+	            return decryptedData;
+	    }
+
+	    /**
+	     *  Public key segment decryption
+	     * @param encryptedData encrypts base64 data
+	     * @param publicKey rsa Public Key
+	     * @return
+	     */
+	    public static String decryptByPublicKey(String encryptedData, String publicKey){
+	            if(encryptedData==null || encryptedData.isEmpty() || publicKey==null || publicKey.isEmpty()) {
+	            	return "";
+	            }
+
+	            try {
+	                encryptedData = encryptedData.replace("\r", "").replace("\n", "");
+	                byte[] data = decryptByPublicKey(decryptBASE64(encryptedData), publicKey);
+	                if(data == null || data.length < 1){
+	                        return  "";
+	                }
+	                return new String(data);
+	            }catch (Exception ex){
+	                    ex.printStackTrace();
+	            }
+	            return "";
+	    }
+
+	    /**
+	     * Private key encryption
+	     *
+	     * @param data source data
+	     * @param privateKey (BASE64 encode)
+	     * @return
+	     * @throws Exception
+	     */
+	    public static byte[] encryptByPrivateKey(byte[] data, String privateKey)
+	                    throws Exception {
+	            byte[] keyBytes =  decryptBASE64(privateKey);
+	            PKCS8EncodedKeySpec pkcs8KeySpec = new PKCS8EncodedKeySpec(keyBytes);
+	            KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM);
+	            Key privateK = keyFactory.generatePrivate(pkcs8KeySpec);
+	            Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
+	            cipher.init(Cipher.ENCRYPT_MODE, privateK);
+	            int inputLen = data.length;
+	            ByteArrayOutputStream out = new ByteArrayOutputStream();
+	            int offSet = 0;
+	            byte[] cache;
+	            int i = 0;
+	            // Encrypt the data in segments
+	            while (inputLen - offSet > 0) {
+	                    if (inputLen - offSet > MAX_ENCRYPT_BLOCK) {
+	                            cache = cipher.doFinal(data, offSet, MAX_ENCRYPT_BLOCK);
+	                    } else {
+	                            cache = cipher.doFinal(data, offSet, inputLen - offSet);
+	                    }
+	                    out.write(cache, 0, cache.length);
+	                    i++;
+	                    offSet = i * MAX_ENCRYPT_BLOCK;
+	            }
+	            byte[] encryptedData = out.toByteArray();
+	            out.close();
+	            return encryptedData;
+	    }
+
+	    /**
+	     *  The private key segments the data
+	     * @param data Data to be encrypted
+	     * @param privateKey
+	     * @return
+	     */
+	    public static String encryptByPrivateKey(String data, String privateKey){
+	            if(data==null || privateKey==null || data.isEmpty()|| privateKey.isEmpty()) {
+	            	return "";
+	            }
+
+	            try {
+	                    byte[] encryptedData = encryptByPrivateKey(data.getBytes(CHARSET), privateKey);
+	                    if(encryptedData == null || encryptedData.length < 1){
+	                            return  "";
+	                    }
+
+	        byte[] dataBytes = encryptBASE64(encryptedData).getBytes(CHARSET);
+	        return new String(dataBytes).replace("\r", "").replace("\n", "");
+	            }catch (Exception ex){
+	                    ex.printStackTrace();
+	            }
+	            return "";
+	    }
+
+	    /**
+	     * BASE64Encoder encryption
+	     *
+	     * @param data
+	     *            Data to encrypt
+	     * @return encrypted string
+	     */
+	    public static String encryptBASE64(byte[] data) {
+	    	//Under the JDK 1.8 environment, use the following 2 lines of code
+	        // BASE64Encoder encoder = new BASE64Encoder();
+	        // String encode = encoder.encode(data);
+	        // The rt.jar package has been deprecated since JKD 9. Java.util.base64.encoder has been used since JDK 1.8
+	        Encoder encoder = Base64.getEncoder();
+	        String encode = encoder.encodeToString(data);
+	        //No matter what environment you are using, the following +/ is replaced with -_
+	        String safeBase64Str = encode.replace('+', '-');
+	        safeBase64Str = safeBase64Str.replace('/', '_');
+	        safeBase64Str = safeBase64Str.replaceAll("=", "");
+	        return safeBase64Str;
+	    }
+	    /**
+	     * BASE64Decoder decryption
+	     *
+	     * @param data
+	     *            The string to decrypt
+	     * @return decrypted byte[]
+	     * @throws Exception
+	     */
+	    public static byte[] decryptBASE64(String data) throws Exception {
+	    	// Under the JDK 1.8 environment, use the following 2 lines of code
+	        // BASE64Decoder decoder = new BASE64Decoder();
+	        // byte[] buffer = decoder.decodeBuffer(data);
+	        // The rt.jar package has been deprecated from JKD 9. Java.util.base64.decoder has been used from JDK 1.8
+	        Decoder decoder = Base64.getDecoder();
+
+	        //Regardless of the environment used, the following substitution of -_ with +/ needs to be done.
+	        String base64Str = data.replace('-', '+');
+	        base64Str = base64Str.replace('_', '/');
+	        int mod4 = base64Str.length()%4;
+	        if(mod4 > 0){
+	            base64Str = base64Str + "====".substring(mod4);
+	        }
+
+	        byte[] buffer = decoder.decode(base64Str);
+	        return buffer;
+	    }
+	}
+
+
+:PHP Demo:
 
 ::
 
@@ -220,10 +260,10 @@ The values of the request parameter data and response field data are the result 
 		class RSA
 		{
 
-			//第三方私钥
+			//Third party private key
 		    public $pri_key = 'MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQD6YNILWOJZjS6FQQ9ZL9CEKcWZTTldrDLsxP2dQME7hSUTDQ5AosBUZk18Uq212SC2+L0UA9G6WPoCNzHCB8TP25jC+EwIkHMN4EEPRs+bEHUgX3Bq3oR2SCHjEiqleTFW2kO/oS6Vg9bhTST5MFaEnA0fc2Bh3+4iRus+5mVc6ux0lG55f1qmvUNM4hhP7qVpzc3X0xFA0Slu8dyel1dbOUQlJbUkrt5NzXXqmRoP5UVHUCXPZzH1kbxdbGA58TonXceh6DHQRa6pIBNaQ6BfnqhMvGVvuIqKPrdWq8yigvTw2zqBfwCwY3/3FZoI5ICQ8oS3GRHYP/rXzncqkKTzAgMBAAECggEAdag77EMnkueKXeo12TZj6Udr6N9mPsOl5qenelcsttiZlHtFIFCays6MSQjdQqA3BGSdDaPB0azwR0xCoKhf70GFZtGhgUDIIFQqnpArDPZN5BmVTVMlsiOxcPBfhAUQj3zf61RF/NLIjnVfE46IiaZ/cDEasMO3NvpWn+dK6L86zklgwHfC5IXTFnFRVA3bWkAQ3gswhLzjs50HNoNV96fsnbt1n7NSWhyz9B8hGMV+qYz1NGmb+VsaAune+oIv28krcaqf+Doah37rCmzEgVeZZ1/flPFOXpaq1eGJDgbLu6FbbgqfabCBlhmuzuwNbDl/2T/U9U6JoQWGR7t++QKBgQD8XSzBqpWwz8ebfsPipvnhIugbHgBnwLaRc3/xieuNuiDMsYPY1isBWSeYqjwV5uTad9s9dRxb6OOMH+KChkUxkYhEvoujUulGSuO4MxJlWl99WWEsbLzefubBD0zyHo5daHbPPXO8UPMu/SfiYxT2D5wsW2/swUqHWS3AmDS9RQKBgQD9/FJC/++DLyhU60Q9vrVY50zQTyPLtPnuIxbsPXB1Exo1wKe+LC02k9Cub9f5EFViTEniWRasB7ecnDxJT/ISU+hJjMUKFuaHueb7dO6wiIqyfpJeQM/4fKalBQI+nCEh3aceNKP44mk/lv2x22+P47EAKh7yqBdEVUv5GlHw1wKBgQCbAqReJOijXU0vLtMlYgj0h9tn5Kq9D/tUJky9UUkVmfFRqevhgdOSlW+j71TO4y9JHfvVqRyNO+ShCmi4Yb8Yrlq0VxIwdNoCqjdryjsPdE5ZEVCF2Bi+1dXpWfuacLhjman4q7duQY7OGwOno9KZPYdhG50JIMUlk9pthVBHvQKBgCXUC+iAuAqg3m/vboWHvvjT0mQANYOkm8j1HvfmmrZFNxUkcZdoev9y+pTQgalN3nm6hRKaVD8hEx7XQj9lEdfa+XDi74H2MTWr4ZQ4MUjHvWiiY2h4XMFUx3kyisgKdwDVQ4vDKVzrU+OtuHFiDnau4fD1VRCtKnH6Bku+uM+XAoGAB7V/OFlk7gaX7gne7p+DypXICn1oGE46aFLsDciOyePNovYg6bfdiUB9evwFSijiHq7eldZIQSRIdUalL1qfv2zDwFmEGpSd/RZYOOv21c3eISjln6W7ZGtumtLHx2nGpC072i5vNee0aAPEdvO0h3y4gvzad5L4KwIwyHifKic=';
 
-			//钱包给的公钥
+			//The public key given by the wallet
 		    public $pub_key = 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAua4XMw/W9BxyZhirTlNau5Y/tdAHkPsbZo58Cdz1ByeRX8RwOibpREDZLTwhMTZGroqWEAZ+efQhx0gez++03Sw6IsPWPDpzpM90ezn2gBqPog7jxQA+M0E32gMHWB5ygplPwQkGz/qGYeJ5qhp2OZ8O+jFqOJNi7ob1hE2QsPT118HIhUzTL77urD61BovI+jg9Rx6PGAqlFLLmfXToqDulLkYVKhhQlL7ii6iuzIXgl46mbmvH2RXJRq083sa9b9J1z/WzXxNaHNpq5USl3ifTTyD/IiOKnblA7f4KJmr9rcMFbAP1mNxz95at6hPBvqGypPqqixxPBrdkOIPUVwIDAQAB';
 
 			public function __construct() {
@@ -240,40 +280,40 @@ The values of the request parameter data and response field data are the result 
 
 
 			 /**
-		     * 格式化公钥
-		     * @param $publicKey string 公钥
+		     * Formats the public key
+		     * @param $publicKey string 
 		     * @return string
 		     */
 		    public function formatterPublicKey($publicKey)
 		    {
 		        if (false !== strpos($publicKey, '-----BEGIN PUBLIC KEY-----')) return $publicKey;
 
-		        $str = chunk_split($publicKey, 64, PHP_EOL);//在每一个64字符后加一个\n
+		        $str = chunk_split($publicKey, 64, PHP_EOL);//Add a \n after each 64 character
 		        $publicKey = "-----BEGIN PUBLIC KEY-----".PHP_EOL.$str."-----END PUBLIC KEY-----";
 
 		        return $publicKey;
 		    }
 
 		    /**
-		     * 格式化私钥
-		     * @param $privateKey string 公钥
+		     * Formats the private key
+		     * @param $privateKey string
 		     * @return string
 		     */
 		    public function formatterPrivateKey($privateKey)
 		    {
 		        if (false !==strpos($privateKey, '-----BEGIN RSA PRIVATE KEY-----')) return $privateKey;
 
-		        $str = chunk_split($privateKey, 64, PHP_EOL);//在每一个64字符后加一个\n
+		        $str = chunk_split($privateKey, 64, PHP_EOL);//Add a \n after each 64 character
 		        $privateKey = "-----BEGIN RSA PRIVATE KEY-----".PHP_EOL.$str."-----END RSA PRIVATE KEY-----";
 
 		        return $privateKey;
 		    }
 
 			/**
-		     * URL base64解码
+		     * URL base64 decoded
 		     * '-' -> '+'
 		     * '_' -> '/'
-		     * 字符串长度%4的余数，补'='
+		     * Remaining number of string length %4, complement '='
 		     * @param unknown $string
 		     */
 		  function urlsafe_b64decode($string) {
@@ -286,7 +326,7 @@ The values of the request parameter data and response field data are the result 
 		    }
 
 		    /**
-		     * URL base64编码
+		     * URL base64 encoding
 		     * '+' -> '-'
 		     * '/' -> '_'
 		     * '=' -> ''
@@ -300,8 +340,8 @@ The values of the request parameter data and response field data are the result 
 
 
 		    /**
-		     *  私钥加密（分段加密）
-		     *  emptyStr    需要加密字符串
+		     *  private key encryption (segment encryption)
+		     *  emptyStr    requires an encrypted string
 		     */
 		    public function encrypt($str) {
 		        $crypted = array();
@@ -318,8 +358,8 @@ The values of the request parameter data and response field data are the result 
 		    }
 
 		    /**
-		     *  公钥解密（分段解密）
-		     *  @encrypstr  加密字符串
+		     *  Public key decryption (segmented decryption)
+		     *  @encrypstr
 		     */
 		    public function decrypt($encryptstr) {
 		        // echo $encryptstr;exit;
@@ -341,14 +381,14 @@ The values of the request parameter data and response field data are the result 
 		$rsa = new RSA();
 		$params = '{"charset":"utf-8","country":"+86","sign":"","mobile":"","time":"1589013592078","app_id":"baaceb1e506e1b5d7d1f0a3b1622583b","version":"2.0","email":"test123@qq.com"}';
 
-		//加密参数
+		//Encryption parameters
 		$encryptParamsByPriv = $rsa->encrypt($params);
 
-		//请求接口
+		//Request Interface
 		$resp = file_get_contents('http://awstestopenapi.hicoin.one/api/v2/user/info?app_id=baaceb1e506e1b5d7d1f0a3b1622583b&data='.$encryptParamsByPriv);
 
 		$resp = json_decode($resp, true)['data'];
-		//解密接口返回
+		//Decryption interface returns
 		echo "get user info api:", $rsa->decrypt($resp);
 
 
@@ -357,29 +397,34 @@ The values of the request parameter data and response field data are the result 
 
 
 
-Appendix 2 : Error Code
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Attachment  2:Interface error code list
+~~~~~~~~~~~~~~~~~~~~~~~~
+========  ==================================================================
+code      msg
+0         success
+100001	  system error
+100004	  request parameter is not valid
+100005	  signature verification failed
+100007	  illegal IP
+100015	  merchant ID is invalid
+100016	  merchant information expired
+110004	  users are frozen and cannot withdraw money
+110023	  mobile phone number has been registered
+110037    withdrawal address is at risk
+110055	  correct withdrawal address for
+110065	  user does not exist (used to obtain user balance, withdraw money, or transfer money)
+110078	  withdrawal or transfer amount less than the minimum transfer amount
+110087	  withdrawal or transfer amount is greater than the maximum transfer amount
+110088	  please do not repeat the request
+110089	  registered mobile phone number is incorrect
+110101	  user registration failed
+110161    exceeds the maximum withdrawal support accuracy
+120202	  currency is not supported
+120206    withdrawal second confirmation failed
+120402	  insufficient balance in withdrawal or transfer
+120403	  insufficient balance of withdrawal fee
+120404	  withdrawal or transfer amount is too small, less than or equal to the commission fee
+900006    the user is at risk. Withdrawal is prohibited
+3040006   cannot transfer money to itself
 
-======  ==================================================================
-code	  msg
-0	      Success
-100001	system error
-100004  request parameter is invalid
-100005	signature verification failed
-100007	illegal IP
-100015	invalid CompanyID
-100016	company information is out of date
-110004	user account is frozen and withdrawal fails
-110023	phone number is registered
-110055	withdrawal address error
-110065	not exist this user
-110078	withdrawal or transfer amount is less than the minimum amount（not support）
-110087	withdrawal or transfer amount is greater than the maximum transfer amount（not support）
-110088	please do not submit the same API request repeatedly
-110089	phone number is incorrect
-110101	registration failed
-120202	not support this symbol
-120402	insufficient withdrawal or transfer amount
-120403	insufficient withdrawal fee
-120404	withdrawal or transfer amount is less than or equal to the fee
-======  ==================================================================
+========  ==================================================================
