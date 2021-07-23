@@ -84,7 +84,7 @@ Contact relevant personnel of the platform to provide the above five types of in
 
 Documentation is the interface that the wallet service provides to third-party applications.
 
-.. image:: images/apiopen-instructions-v2.png
+.. image:: images/apiopen-instructions.png
    :width: 470px
    :height: 153px
    :align: center
