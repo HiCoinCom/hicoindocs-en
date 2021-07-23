@@ -24,9 +24,7 @@ Note: If the client's project time is urgent, the necessary processes [obtaining
 
 Note: Getting the address in advance is conducive to efficient address allocation after user registration; If the user registers and then obtains the address through the interface, the acquisition may fail because of other reasons such as the network, resulting in the user can not normally complete the business.
 
-.. image:: images/api_tsoulution_zhunbei.png
-   :width: 400px
-   :align: center
+
 
 2.User deposit
 -------------------
@@ -43,10 +41,6 @@ Note: Getting the address in advance is conducive to efficient address allocatio
 
 6）The customer system notifies the user of successful coin charging.
 
-
-.. image:: images/api_tsoulution_chongzhi.png
-   :width: 600px
-   :align: center
 
 
 Note: The asynchronous callback of WAAS system will be triggered when each order is final, and it can be sent up to 5 times per day;
@@ -80,9 +74,7 @@ When the callback fails five times, the callback is stopped
 6）The customer system informs the user that the withdrawal is successful.
 
 
-.. image:: images/api_tsoulution_tibi.png
-   :width: 600px
-   :align: center
+
 
 
 
@@ -99,9 +91,7 @@ When the callback fails five times, the callback is stopped
 4）If the order quantity, amount and status are correct, the reconciliation will be successful; Otherwise, if the reconciliation is abnormal, contact WAAS technician to help deal with it
 
 
-.. image:: images/api_tsoulution_duizhang.png
-   :width: 400px
-   :align: center
+
 
 
 Note: In the WAAS system, there are three kinds of cost expenses in the tripartite system: collecting miners' fee, extracting miners' fee, and profit-sharing commission;
