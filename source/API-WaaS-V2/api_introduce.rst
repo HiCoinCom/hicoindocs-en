@@ -17,7 +17,3 @@ I、Overview
 -------------------
 
   The WAAS Alliance aims to build an open bank in the blockchain field by building a global financial clearing system across the main chain and project parties, sharing the flow of the members, reducing the costs of the members and improving the utilization of the assets of the members. Let blockchain connect everything.
-
-.. image:: images/yuanjing.jpg
-   :width: 600px
-   :align: center
