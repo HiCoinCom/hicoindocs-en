@@ -4,7 +4,7 @@ II. Access Guidelines
 You need to follow the following procedure to access the WAAS Alliance
 
 .. image:: images/jieruzhiyin2.png
-   :width: 800px
+.. :width: 800px
    :align: center
 
 
