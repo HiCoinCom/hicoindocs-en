@@ -1,4 +1,4 @@
-III. Docking scheme
+III. Docking solutions
 ====================
 
 In order to enable customers to access WAAS services more conveniently and quickly, the platform has sorted out a set of relatively perfect technology docking schemes based on the docking experience of previous customers. The details are as follows:
