@@ -27,35 +27,35 @@ Method 2：Use WeChat to scan the code to open the link to download:
 
 1.2 Register for Hicoin account
 ~~~~~~~~~~~~~~~~~~~
-Open the [Hicoin] app and register the [Cloud Wallet] account (register when the unregistered account is logged in), which supports email and mobile phone number
+Open the [Hicoin] app and register the account (register when the unregistered account is logged in), which supports email and mobile phone number
 
-.. image:: images/api_plan_zhucezhanghao.png
+.. image:: images/api_plan_zhucezhanghao3.png
    :width: 180px
    :align: center
 
 
 
-.. image:: images/api_plan_zhucezhanghao2.png
+.. image:: images/api_plan_zhucezhanghao4.png
    :width: 180px
    :align: center
 
 
-1.3 Complete identity authentication
+1.3 Complete Person Verification
 ~~~~~~~~~~~~~~~~~~~
-Click Cloud Wallet - [Settings] to enter the Settings page
+Open the user center - [Not Verified], enter the Person Verification page
 
-.. image:: images/api_plan_shezhi1.png
+.. image:: images/api_plan_shezhi3.png
    :width: 180px
    :align: center
 
 
-.. image:: images/api_plan_shezhi2.png
+.. image:: images/api_plan_shezhi4.png
    :width: 180px
    :align: center
 
-Complete [Security Level] and [Google Identity Certifier] (Security Level 2 requires platform review, you can contact the project manager or customer service for quick review)
+Complete [Person Verification] and [Google Authentication] (Level 2 requires platform review, you can contact the project manager or customer service for quick review)
 
-.. image:: images/api_plan_shimingrenzheng.png
+.. image:: images/api_plan_shimingrenzheng2.png
    :width: 180px
    :align: center
 
