@@ -17,4 +17,4 @@ HiCoin Docments
    Custody WaaS API Doc V2<API-WaaS-V2/index>
    Open API Document[new]<API-Platform/home>
    Document Center<Documents/index>
-   FQA<FQA/index>
+   FAQ<FAQ/index>
