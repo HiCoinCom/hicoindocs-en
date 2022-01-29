@@ -1,4 +1,4 @@
-3.Docking Solutions
+III. Docking Solutions
 ====================
 
 In order to allow public chain developers to access the WaaS alliance more conveniently and quickly, we provide BaaS services to meet the public chain docking needs. Based on the docking experience of past customers, the platform has sorted out a set of docking solutions. details as follows:
