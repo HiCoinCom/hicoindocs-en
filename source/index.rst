@@ -15,6 +15,6 @@ HiCoin Docments
    Tec Structure<Technology/index>
    Integration<DeliveryProcess/index>
    Custody WaaS API Doc V2<API-WaaS-V2/index>
-   Custody WAPI Doc<API-WPI/index>
+   Custody WAPI Doc<API-WAPI/index>
    Open API Document[new]<API-Platform/home>
    Document Center<Documents/index>
