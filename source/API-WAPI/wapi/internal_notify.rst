@@ -1,4 +1,4 @@
-3.6 Internal Notification Interface
+4.6 Internal Notification Interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Description: Internal Notification Interface
