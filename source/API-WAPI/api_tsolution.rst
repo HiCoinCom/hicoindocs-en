@@ -5,11 +5,11 @@ In order to allow public chain developers to access the WaaS alliance more conve
 
 The whole Process is divided into three steps：
 
-1.Register A Deposit Address
+3.1 Register A Deposit Address
 
-2.Make Deposits
+3.2 Make Deposits
 
-3.Make Withdrawals
+3.3 Make Withdrawals
 
 The overall docking process is as follows
 -------------------
@@ -20,7 +20,7 @@ The overall docking process is as follows
    :align: center
 
 
-1.Register A Deposit Address
+3.1 Register A Deposit Address
 -------------------
 
 1）The number of available addresses can be queried by currency name. 
@@ -31,7 +31,7 @@ Note: If the type of registered currency is memo, the same address Only one regi
 
 
 
-2.Make Deposits
+3.2 Make Deposits
 -------------------
 
 1）The third-party wallet detects that the address has a deposit transaction, initiates a deposit notification, and informs the BaaS system (interface address: /api/v1/deposit/notify)
@@ -40,7 +40,7 @@ Note: If the type of registered currency is memo, the same address Only one regi
 
 
 
-3.Make Withdrawals
+3.3 Make Withdrawals
 -------------------
 
 1）The user initiates a withdrawal request in the WaaS system
