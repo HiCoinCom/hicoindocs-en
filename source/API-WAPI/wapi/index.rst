@@ -2,9 +2,7 @@
 Custody WAPI Documentation
 ==============================================
 
-Welcome to the HiCoin asset custody platform. This document is used by the third-party technical team to add the self-developed mainchain to the WaaS Alliance for alliance members.
-
-Note: How to use WAPI to access the mainchain, the server and private keys are kept by the third-party technical team, and the WaaS Alliance is not responsible for the security of assets. Therefore, the third-party technical team must establish a complete wallet private key custody system and API private key custody system.
+Welcome to HiCoin asset custody platform, HiCoin asset custody platform based on deep underlying wallet technology and secure blockchain wallet architecture, will be a powerful asset custody function through the interface to provide third-party partners. In this way can help partners to focus on the core business development at the same time can also ensure the safety of assets.
 
 .. toctree::
    :maxdepth: 2
