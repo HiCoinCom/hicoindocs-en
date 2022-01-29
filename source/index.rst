@@ -18,4 +18,3 @@ HiCoin Docments
    Custody WAPI Doc<API-WPI/index>
    Open API Document[new]<API-Platform/home>
    Document Center<Documents/index>
-   FAQ<FQA/index>
