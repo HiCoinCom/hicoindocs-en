@@ -6,7 +6,7 @@ Welcome to HiCoin asset custody platform, HiCoin asset custody platform based on
 
 .. toctree::
    :maxdepth: 2
-   :caption: Index:
+   :caption: CONTENT:
 
 	3.1 Address Registration Interface<address_register>
 	3.2 The number of remaining addresses available interface<address_count>
