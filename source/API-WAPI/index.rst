@@ -8,7 +8,7 @@ Note: How to use WAPI to access the mainchain, the server and private keys are k
 
 .. toctree::
    :maxdepth: 3
-   :caption: Index:
+   :caption: CONTENT:
 
 	1 Preliminary Preparation<wapi_description>
 	2 Domain Name and API Key<wapi_domain_secret>
