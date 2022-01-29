@@ -8,10 +8,10 @@ Welcome to HiCoin asset custody platform, HiCoin asset custody platform based on
    :maxdepth: 2
    :caption: CONTENT:
 
-	3.1 Address Registration Interface<address_register>
-	3.2 The number of remaining addresses available interface<address_count>
-	3.3 Deposit Notification Interface<deposit_notify>
-	3.4 Withdrawal Interface<withdraw_consume>
-	3.5 Withdrawal Notification Interface<withdraw_notify>
-	3.6 Internal Notification Interface<internal_notify>
-	3.7 Withdraw Token and Return Interface<withdraw_cancel>
+	4.1 Address Registration Interface<address_register>
+	4.2 The number of remaining addresses available interface<address_count>
+	4.3 Deposit Notification Interface<deposit_notify>
+	4.4 Withdrawal Interface<withdraw_consume>
+	4.5 Withdrawal Notification Interface<withdraw_notify>
+	4.6 Internal Notification Interface<internal_notify>
+	4.7 Withdraw Token and Return Interface<withdraw_cancel>
