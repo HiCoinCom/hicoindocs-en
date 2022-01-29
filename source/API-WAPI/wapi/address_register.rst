@@ -1,4 +1,4 @@
-3.1 Address Registration Interface
+4.1 Address Registration Interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Description: Push address to the platform, this address is used to assign to users
