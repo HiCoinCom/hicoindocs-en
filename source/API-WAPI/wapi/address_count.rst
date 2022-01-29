@@ -1,5 +1,5 @@
 
-3.2 The number of remaining addresses available interface
+4.2 The number of remaining addresses available interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Description: How many addresses are available in the pushed addresses
