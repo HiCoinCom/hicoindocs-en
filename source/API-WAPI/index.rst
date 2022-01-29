@@ -10,9 +10,9 @@ Note: How to use WAPI to access the mainchain, the server and private keys are k
    :maxdepth: 3
    :caption: CONTENT:
 
-	1 Preliminary Preparation<wapi_description>
-	2 Domain Name and API Key<wapi_domain_secret>
-	3 Docking Solutions<api_tsolution>
-        4 Interface Documentation<wapi/index>
-	5 Appendix<wapi_note>
-	6 Frequently Asked Questions(FAQ)<wapi_faq>
+	I. Preliminary Preparation<wapi_description>
+	II. Domain Name and API Key<wapi_domain_secret>
+	III. Docking Solutions<api_tsolution>
+        IV. Interface Documentation<wapi/index>
+	V. Appendix<wapi_note>
+	VI. Frequently Asked Questions(FAQ)<wapi_faq>
