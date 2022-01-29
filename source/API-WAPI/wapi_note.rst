@@ -1,5 +1,5 @@
 
-4 Appendix
+IV. Appendix
 ==========
 
 Appendix 1: Encryption and Decryption Method
