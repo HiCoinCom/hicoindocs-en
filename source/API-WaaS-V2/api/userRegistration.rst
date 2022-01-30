@@ -6,7 +6,7 @@ User Mobile Registration
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Description: Register to become a wallet user
-:nterface address: /api/v2/user/createUser
+:Interface address: /api/v2/user/createUser
 :Request method: POST
 :Request parameters:
 
@@ -183,14 +183,14 @@ symbol    String  required	   currency
 ========= ======= ========== =====================================================================
 
 
-:Example request parameters::
+:Example request parameters:
 
 ::
 
 	app_id=baaceb1e506e1b5d7d1f0a3b1622583b&data=GCJBk77n7epyOexdGZ20qvukd321TpJ62lIAtlCinW6TzHx8SIbm6evXGulO87UgLTzIWCtgupgeLJKDdZmC7msuPNBGK--Ec27WZXjuhI0gNWXcOVk5RW_VRVcyfJ1Ml-DMW8XVxZRgA2U1bt9BztiyfryzMGj8_jl1IXd5sOQfPYXulCdm70WyTJpjsDkuMSov6QUmOn-C_-HUoZ7s715EMeZ60D09uUsF0i6mKLhFZTEQZPGPeJITYSJNddAw7nvqvX2KzNc6YUeCQhEmU1Dfxp65W4e3SVOgpd_2Q-dLN1MpOlkUKwbmbpb-gEh_s68yl7ox6WSgKfCK4i_uvA
 
 
-:Response parameters::
+:Response parameters:
 
 ========= ========== ============= ======================================================================
 Param	    type       required        Description
@@ -198,7 +198,7 @@ data      String     optional        encrypted String decrypted format is define
 ========= ========== ============= ======================================================================
 
 
-:After the response parameter data is decrypted::
+:After the response parameter data is decrypted:
 
 ========= ========== ============= ===========================================================================
 Param	    type       required         Description
@@ -217,13 +217,13 @@ address    String   required             the currency account address
 
 
 
-:Example response::
+:Example response:
 
 ::
 
 	{"data":"C6vPlXILSVMFOY4yzXMQ3lNmNRLbnfCIlIwgRXo3UXH152rKma-9vq8dEomWNOOhCxhsW-cV7bh1SpYQg2ehK5QbcIbrCdIyuD87QPyAUnXn5UgEWcYQU_6stj8yazgv5o6QfAZbe5AUDs4rjU55NziDI0Ml9bbpkk1u9PhH8L5s2uoYjjDkjTqk_KQx9Mjt42VvDkfaWUuAsaF3V0uqaCVEvnx0yQXS_lr4zRsNptspnHGJwXnvhBMRN3EEkpG_IdlkndK3Lujwe96vlqPQawLE1nDE7VsPwJq-4S-2GHOtUPMzdBXAGIHnDFeMT03ExXWBMWutng89itdFR6zRUg"}
 
-:Example after response data decryption::
+:Example after response data decryption:
 
 ::
 
