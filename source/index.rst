@@ -16,5 +16,3 @@ HiCoin Docments
    Integration<DeliveryProcess/index>
    Custody WaaS API Doc V2<API-WaaS-V2/index>
    Custody WAPI Doc<API-WAPI/index>
-   Open API Document[new]<API-Platform/home>
-   Document Center<Documents/index>
