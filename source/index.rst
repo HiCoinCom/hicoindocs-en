@@ -10,9 +10,5 @@ HiCoin Docments
    :maxdepth: 3
    :caption: Content:
 
-   HiCoin<Introduction/index>
-   Features<Functions/index>
-   Tec Structure<Technology/index>
-   Integration<DeliveryProcess/index>
    Custody WaaS API Doc V2<API-WaaS-V2/index>
    Custody WAPI Doc<API-WAPI/index>
