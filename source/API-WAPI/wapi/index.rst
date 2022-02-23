@@ -2,7 +2,7 @@
 IV. Custody WAPI Documentation
 ==============================================
 
-Welcome to HiCoin asset custody platform, HiCoin asset custody platform based on deep underlying wallet technology and secure blockchain wallet architecture, will be a powerful asset custody function through the interface to provide third-party partners. In this way can help partners to focus on the core business development at the same time can also ensure the safety of assets.
+Welcome to TopValue asset custody platform, TopValue asset custody platform based on deep underlying wallet technology and secure blockchain wallet architecture, will be a powerful asset custody function through the interface to provide third-party partners. In this way can help partners to focus on the core business development at the same time can also ensure the safety of assets.
 
 .. toctree::
    :maxdepth: 2
