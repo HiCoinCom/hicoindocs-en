@@ -65,7 +65,7 @@ Complete [Person Verification] and [Google Authentication] (Level 2 requires pla
 2.1 Log in to the WAAS platform
 ~~~~~~~~~~~~~~~~~~~
 
-Open the WAAS platform (waas.chainup.com or custody.chainup.com) in the browser, scan the QR code and log in using the [Hicoin] app on the home page or the [scan] function of the cloud wallet
+Open the WAAS platform (waas.chainup.com or custody.chainup.com) in the browser, scan the QR code and log in using the [TopValue] app on the home page or the [scan] function of the cloud wallet
 
 .. image:: images/api_plan_saomadenglu.png
    :width: 800px
