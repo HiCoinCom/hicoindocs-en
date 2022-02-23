@@ -11,7 +11,7 @@ You need to follow the following procedure to access the WAAS Alliance
 1.Create an account
 -------------------
 
-1.1 Download the Hicoin wallet
+1.1 Download the TopValue wallet
 ~~~~~~~~~~~~~~~~~~~
 
 Method 1：Open the link in your mobile browser：https://www.hicoin.com/appDownload?locale=en-US
@@ -25,9 +25,9 @@ Method 2：Use WeChat to scan the code to open the link to download:
 
 
 
-1.2 Register for Hicoin account
+1.2 Register for TopValue account
 ~~~~~~~~~~~~~~~~~~~
-Open the [Hicoin] app and register the account (register when the unregistered account is logged in), which supports email and mobile phone number
+Open the [TopValue] app and register the account (register when the unregistered account is logged in), which supports email and mobile phone number
 
 .. image:: images/api_plan_zhucezhanghao3.png
    :width: 180px
