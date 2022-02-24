@@ -14,11 +14,11 @@ You need to follow the following procedure to access the WAAS Alliance
 1.1 Download the TopValue wallet
 ~~~~~~~~~~~~~~~~~~~
 
-Method 1：Open the link in your mobile browser：https://www.hicoin.com/appDownload?locale=en-US
+Method 1：Open the link in your mobile browser：https://custody.chainup.com/appDownload/
 
 Method 2：Use WeChat to scan the code to open the link to download:
 
-.. image:: images/QR.jpg
+.. image:: images/QR.png
    :width: 200px
    :align: center
 
