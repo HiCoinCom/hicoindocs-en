@@ -12,7 +12,7 @@ TopValue digital asset custody platform has been developed with the highest leve
    :caption: CONTENT:
 
   I. Overview<api_introduce>
-  II. Access Guidelines<api_plan>
+  II. Access Guide<api_plan>
   III. Docking Solutions<api_tsolution>
   IV. Preparation Before Development<api_setout>
   V. API Documentation<api_apidocs>
