@@ -9,11 +9,11 @@ I、Overview
 
   Exchanges, Asset Management Platforms, and other Crypto Institutions can secure their digital assets efficiently and quickly with cloud hosting via API and SDK. At the same time, clients can carry out their asset management operations through our web-based user interface (https://waas.chainup.com), with numerous financial products available for client’s usage.
 
-  At present, WAAS Alliance has more than 500 customers, involving various industries, such as blockchain industry: exchanges, project parties, miners, OTC, lending and so on; Traditional industries: games, real estate, live broadcasting, e-commerce, supply chain, media, etc. Customers who join the WAAS Alliance can enjoy many advantages such as [0 commission fee] and [second transfer] between members of the Alliance.
+  At present, WAAS Alliance has 500 over clients from various industries such as blockchain industry like exchanges, miners, OTC, lending etc and traditional industries like games, real estate, live broadcasting, e-commerce, supply chain and media etc. Our benefits include zero transaction fees and instantaneous real-time transfer.
 
 
 
 1.2 Vision
 -------------------
 
-  The WAAS Alliance aims to build an open bank in the blockchain field by building a global financial clearing system across the main chain and project parties, sharing the flow of the members, reducing the costs of the members and improving the utilization of the assets of the members. Let blockchain connect everything.
+  The WAAS Alliance aims to build an open bank in the blockchain field by building a global financial clearing system across the main chain and relevant projects within a shared network which helps to reduce cost and improve asset’s utilization. 
