@@ -1,7 +1,7 @@
-II. Access Guidelines
+II. Access Guide
 ====================
 
-You need to follow the following procedure to access the WAAS Alliance
+Follow the instructions below to access WAAS Alliance 
 
 .. image:: images/api_plan_jieruzhiyin2.png
    :width: 800px
@@ -11,12 +11,12 @@ You need to follow the following procedure to access the WAAS Alliance
 1.Create an account
 -------------------
 
-1.1 Download the TopValue wallet
+1.1 Download TopValue wallet
 ~~~~~~~~~~~~~~~~~~~
 
 Method 1：Open the link in your mobile browser：https://custody.chainup.com/appDownload/
 
-Method 2：Use WeChat to scan the code to open the link to download:
+Method 2：Use WeChat to scan the QR code for download:
 
 .. image:: images/QR.png
    :width: 200px
@@ -25,9 +25,9 @@ Method 2：Use WeChat to scan the code to open the link to download:
 
 
 
-1.2 Register for TopValue account
+1.2 Register a TopValue Account
 ~~~~~~~~~~~~~~~~~~~
-Open the [TopValue] app and register the account (register when the unregistered account is logged in), which supports email and mobile phone number
+Open the app and register a new account using email and mobile phone number.
 
 .. image:: images/api_plan_zhucezhanghao3.png
    :width: 180px
@@ -40,7 +40,7 @@ Open the [TopValue] app and register the account (register when the unregistered
    :align: center
 
 
-1.3 Complete Person Verification
+1.3 Complete Verification
 ~~~~~~~~~~~~~~~~~~~
 Open the user center - [Not Verified], enter the Person Verification page
 
@@ -53,7 +53,7 @@ Open the user center - [Not Verified], enter the Person Verification page
    :width: 180px
    :align: center
 
-Complete [Person Verification] and [Google Authentication] (Level 2 requires platform review, you can contact the project manager or customer service for quick review)
+Complete personal verification and google authentication. (For security level 2, please kindly contact customer support for verification)
 
 .. image:: images/api_plan_shimingrenzheng2.png
    :width: 180px
@@ -65,7 +65,7 @@ Complete [Person Verification] and [Google Authentication] (Level 2 requires pla
 2.1 Log in to the WAAS platform
 ~~~~~~~~~~~~~~~~~~~
 
-Open the WAAS platform (waas.chainup.com or custody.chainup.com) in the browser, scan the QR code and log in using the [TopValue] app on the home page or the [scan] function of the cloud wallet
+Open WAAS platform (waas.chainup.com or custody.chainup.com) using any browser, scan the QR code and log in using the [TopValue] app or by scanning the QR code.
 
 .. image:: images/api_plan_saomadenglu.png
    :width: 800px
@@ -75,24 +75,24 @@ Open the WAAS platform (waas.chainup.com or custody.chainup.com) in the browser,
 2.2 Create a wallet
 ~~~~~~~~~~~~~~~~~~~
 
-Enter the 【WAAS Alliance】 page and create the wallet (the name of the wallet does not support modification, please fill in carefully).
+Enter the 【WAAS Alliance】 page and create a wallet. Please fill in the name carefully because you are unable to change the name once the wallet has been created.
 
 .. image:: images/api_plan_chuangjianqianbao1.png
    :width: 800px
    :align: center
 
-2.2 Open currency
+2.2 Add Currency
 ~~~~~~~~~~~~~~~~~~~
 
-Before opening the currency, please contact the platform to open the main chain currency first (after opening the main chain currency, the corresponding token can be used for free, if not included, you can contact the platform to offer the currency for free)
+Before adding a currency, please contact the platform admin to add the main chain first. The corresponding token can only be used for free once the main chain currency has been added by the platform admin.
 
-After opening currency, enter the wallet and click "Currency Management" to search for currency
+After adding the currency, enter the wallet and click “Currency Management” to search for the currency.
 
 .. image:: images/api_plan_bizhongguanli.png
    :width: 800px
    :align: center
 
-Go to the edit page and open the currency
+Go to the edit page and add the currency.  
 
 .. image:: images/api_plan_bizhongbianji.png
    :width: 800px
@@ -102,22 +102,22 @@ Go to the edit page and open the currency
 2.3 Obtain API information
 ~~~~~~~~~~~~~~~~~~~
 
-Create APIs (currently only one full permissions API is supported)
+Create APIs (currently only allows permission and support one set of API)  
 
 .. image:: images/api_plan_apiliebiao.png
    :width: 800px
    :align: center
 
-The creation is complete and the public key information is perfected
+The API creation is completed and the public key information is available now.
 
 .. image:: images/api_plan_apixiangqing.png
    :width: 800px
    :align: center
 
-2.4 Development and testing
+2.4 Development and Testing
 ~~~~~~~~~~~~~~~~~~~
 
-Systematically docking with API documents according to the technical solutions provided by the platform
+API documentation integration with the system based on the platform’s capabilities and solutions.
 
 
 
@@ -130,19 +130,19 @@ Systematically docking with API documents according to the technical solutions p
 Support online and offline signing
 
 
-3.2 Payment expenses
+3.2 Payment
 ~~~~~~~~~~~~~~~~~~~
 
-Payment of system subscription, installation and other costs (the specific types of fees shall be subject to the contract)
+Subscription payment for system, installation and other costs. (Specific type of fees are subjected based on client’s contract)
 
 
-4.Put it to use
+4.Usage
 -------------------
 
-4.1 Assist on-line
+4.1 Online Assistance
 ~~~~~~~~~~~~~~~~~~~
 
-Assist merchants to officially launch operations
+Assist merchants with operations
 
 
 4.2 Technical support
