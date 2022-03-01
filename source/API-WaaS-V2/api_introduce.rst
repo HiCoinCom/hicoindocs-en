@@ -5,9 +5,9 @@ I、Overview
 1.1 Introduction
 -------------------
 
-  WAAS Alliance is based on the experience of more than 300 exchanges that Chainup Group has served for 3 years. It encapsulates the underlying blockchain wallet into a complete set of WAAS services, including asset custody, node service, main chain currency development, one-click access to popular currencies, co-managed wallet, lending and financial management and other functional services.
+  ChainUP Custodian is a comprehensive set of digital asset custody services provided by ChainUP Group. We have served more than 600 clients for over the past 4 years, leveraging on our extensive experience in digital asset custody and development of 200+ coins. Our services include mainchain asset custody, node services, customized mainchain development, easy inclusion for new coins and tokens, co-managed wallets, asset management and many others.
 
-  WAAS Alliance through API, SDK and other forms for the third party partners to provide fast, low-cost integrated WAAS services (up to 200 main chain unlimited coin acceptance, coin issuance and other functions); At the same time, the third-party partners can also carry out asset management through the Web-side visual interface (https://waas.chainup.com), and more abundant financial products are available for you to use.
+  Exchanges, Asset Management Platforms, and other Crypto Institutions can secure their digital assets efficiently and quickly with cloud hosting via API and SDK. At the same time, clients can carry out their asset management operations through our web-based user interface (https://waas.chainup.com), with numerous financial products available for client’s usage.
 
   At present, WAAS Alliance has more than 500 customers, involving various industries, such as blockchain industry: exchanges, project parties, miners, OTC, lending and so on; Traditional industries: games, real estate, live broadcasting, e-commerce, supply chain, media, etc. Customers who join the WAAS Alliance can enjoy many advantages such as [0 commission fee] and [second transfer] between members of the Alliance.
 
