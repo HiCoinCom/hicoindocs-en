@@ -102,7 +102,7 @@ Go to the edit page and add the currency.
 2.3 Obtain API information
 ~~~~~~~~~~~~~~~~~~~
 
-Create APIs (currently only allows permission and support one set of API)  
+Create APIs (Currently only allows permission and support one set of API)  
 
 .. image:: images/api_plan_apiliebiao.png
    :width: 800px
