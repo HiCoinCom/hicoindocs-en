@@ -2,10 +2,10 @@ Merchants bank transfer
 ======================
 
 
-Waas Merchant Transfer
+Custody Merchant Transfer
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-:Description: Waas internal merchants transfer money to each other
+:Description: Custody internal merchants transfer money to each other
 :Interface address: /api/v2/account/transfer
 :Request method: POST
 :Request parameters:
@@ -25,7 +25,7 @@ time          Long        required     Current timestamp
 charset       String      required     Coding format, no special case, transfer parameter UTF-8
 version       String      required     Interface version number, no special case, transfer parameter v2
 request_id    String      required     Request unique identification, up to 64 bits
-symbol        String      required     Transfer currency, WAAS get currency name
+symbol        String      required     Transfer currency, Custody get currency name
 amount        String      required     Transfer quantity, including transfer fees
 to            String      required     Transfer in merchant, fill in merchant APPID at present
 remark        String      required     Remark Field
