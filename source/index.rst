@@ -10,5 +10,5 @@ TopValue Documents
    :maxdepth: 3
    :caption: Content:
 
-   Custody WaaS API Doc V2<API-WaaS-V2/index>
+   Custody API Doc V2<API-WaaS-V2/index>
    Custody WAPI Doc<API-WAPI/index>
