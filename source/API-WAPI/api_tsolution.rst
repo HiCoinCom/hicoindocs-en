@@ -1,7 +1,7 @@
 III. Docking Solutions
 ====================
 
-In order to allow public chain developers to access the WaaS alliance more conveniently and quickly, we provide BaaS services to meet the public chain docking needs. Based on the docking experience of past customers, the platform has sorted out a set of docking solutions. details as follows:
+In order to allow public chain developers to access the ChainUP Custody more conveniently and quickly, we provide BaaS services to meet the public chain docking needs. Based on the docking experience of past customers, the platform has sorted out a set of docking solutions. details as follows:
 
 The whole Process is divided into three steps：
 
@@ -43,7 +43,7 @@ Note: If the type of registered currency is memo, the same address Only one regi
 3.3 Make Withdrawals
 -------------------
 
-1）The user initiates a withdrawal request in the WaaS system
+1）The user initiates a withdrawal request in the Custody system
 2）Main chain developers pull the list of withdrawals (interface address: /api/v1/withdraw/consume)
 3）After the chain is successfully connected, BaaS will be notified of the withdrawal result, and the BaaS interface will respond (interface address: /api/v1/withdraw/notify)
 
