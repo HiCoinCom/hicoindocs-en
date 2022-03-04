@@ -25,7 +25,7 @@ charset      String  required       Coding format, no special case, transfer par
 version      String  required       Interface version number, no special case, transfer parameter v2
 request_id   String  required       Request unique identification, up to 64 bits
 from_uid     String  required       Transfer out user ID
-to_address   String  required       Transfer in the user address, memo type, use "_" For example: waaswaaseos_24545
+to_address   String  required       Transfer in the user address, memo type, use "_" For example:eos_24545
 amount       String  required       Withdrawal amount, including withdrawal service charge; The service charge needs to be configured in the background of the merchant
 symbol       String  required       Withdrawal currency
 ============ ======= ============= =======================================================================================================================================
