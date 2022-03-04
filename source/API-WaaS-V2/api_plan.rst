@@ -1,7 +1,7 @@
 II. Access Guide
 ====================
 
-Follow the instructions below to access WAAS Alliance 
+Follow the instructions below to access ChainUP Custody 
 
 .. image:: images/api_plan_jieruzhiyin2.png
    :width: 800px
@@ -62,10 +62,10 @@ Complete personal verification and google authentication. (For security level 2,
 2.Create and configure a corporate wallet
 -------------------
 
-2.1 Log in to the WAAS platform
+2.1 Log in to the ChainUP Custody platform
 ~~~~~~~~~~~~~~~~~~~
 
-Open WAAS platform (waas.chainup.com or custody.chainup.com) using any browser, scan the QR code and log in using the [TopValue] app or by scanning the QR code.
+Open ChainUP Custody platform (waas.chainup.com or custody.chainup.com) using any browser, scan the QR code and log in using the [TopValue] app or by scanning the QR code.
 
 .. image:: images/api_plan_saomadenglu.png
    :width: 800px
@@ -75,7 +75,7 @@ Open WAAS platform (waas.chainup.com or custody.chainup.com) using any browser, 
 2.2 Create a wallet
 ~~~~~~~~~~~~~~~~~~~
 
-Enter the 【WAAS Alliance】 page and create a wallet. Please fill in the name carefully because you are unable to change the name once the wallet has been created.
+Enter the 【ChainUP Custody】 page and create a wallet. Please fill in the name carefully because you are unable to change the name once the wallet has been created.
 
 .. image:: images/api_plan_chuangjianqianbao1.png
    :width: 800px
