@@ -1,5 +1,5 @@
 
-Custody WaaS API Documentation V2
+Custody API Documentation V2
 ==============================================
 
 Thanks for visiting TopValue Digital Asset Custody Platform！
