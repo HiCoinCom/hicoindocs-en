@@ -24,7 +24,7 @@ The overall docking process is as follows
 -------------------
 
 1）The number of available addresses can be queried by currency name. 
-Note: (When pushing addresses, there is a limit on the number of addresses that cannot exceed 100 at a time, and the total number of available addresses cannot exceed 5000. Interface address: /api/v1/address/available)
+Note: (A maximum of 100 addresses per push to Custody, with each push checking that the number of addresses remaining available to Custody is greater than 5,000 and disallowing registration if 5,000 addresses are not being used. Interface address: /api/v1/address/available)
 
 2）Push the currency name and address list to the BaaS platform, after the response is successful, and the representative registered address is successful (interface address: /api/v1/address/register) 
 Note: If the type of registered currency is memo, the same address Only one registration is allowed.。
