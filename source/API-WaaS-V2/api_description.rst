@@ -7,7 +7,7 @@
 1）Development mode
 ~~~~~~~~~~~~~~~~~~~
 
-To meet the diverse business needs of customers, WAAS supports two docking methods: SDK and API;
+To meet the diverse business needs of customers, ChainUP Custody supports two docking methods: SDK and API;
 
 **SDK**：Support for Java and PHP
 
@@ -37,9 +37,9 @@ When the wallet service receives a request from a third-party application, in or
 
 :Production domain name(test environment not supported): https://openapi.hicoin.vip
 :app_id: Please get it after creating the wallet
-:rsa_wallet_pub: Waas system public key; Please create the wallet and get it from the WAAS system
+:rsa_wallet_pub: Custody system public key; Please create the wallet and get it from the Custody system
 :rsa_third_prv: Client private key; Independent generation and preservation
-:rsa_third_pub: Client public key; Autonomous generation; Please create the wallet and configure it to the WAAS system
+:rsa_third_pub: Client public key; Autonomous generation; Please create the wallet and configure it to the Custody system
 
 **RSA public/private key generated address**
 http://www.metools.info/code/c80.html
