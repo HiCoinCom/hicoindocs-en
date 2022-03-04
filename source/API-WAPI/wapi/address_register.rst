@@ -5,7 +5,7 @@
 
 :Interface Address: /api/v1/address/register
 :Request Method: POST
-:Note: The maximum usable number is 5,000. If the address is memo type, only one address needs to be registered, and the memo will be allocated by Party B
+:Note: A maximum of 100 addresses per push to Custody, with each push checking that the number of addresses remaining available to Custody is greater than 5,000 and disallowing registration if 5,000 addresses are not being used. If the address is memo type, only one address needs to be registered, and the memo will be allocated by Party B
 
 :Request Parameters:
 
