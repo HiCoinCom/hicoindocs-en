@@ -281,8 +281,8 @@ address_from          String     required   Source address
 address_to            String     required   Arrival address
 txid                  String     required   Blockchain transaction ID
 confirmations         int        required   Number of blockchain confirmations
-saas_status           int        required   Platform audit status: 0 not approved, 1 approved, 2 rejected
-company_status        int        required   Merchant audit status: 0 not approved, 1 approved, 2 rejected
+saas_status           int        required   Platform audit status: 0 not approved, 1 reviewed, 2 rejected
+company_status        int        required   Merchant audit status: 0 not approved, 1 reviewed, 2 rejected
 status                int        required   Withdrawal status: 0 not approved, 1 approved, 2 rejected, 3 in payment, 4 failed, 5 completed, 6 cancelled
 ===================== ========= ========== ========================================================================================================================
 
