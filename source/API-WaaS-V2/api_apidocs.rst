@@ -3,7 +3,7 @@ V. API Documentation
 
 To meet the diverse business needs of customers, ChainUP Custody supports two docking methods: SDK and API;
 
-**SDK**：Support for Java and PHP
+**SDK**：Support for Java、PHP and node
 
 java SDK address：https://github.com/HiCoinCom/java-sdk
 
