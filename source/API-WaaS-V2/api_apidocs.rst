@@ -9,6 +9,8 @@ java SDK address：https://github.com/HiCoinCom/java-sdk
 
 PHP SDK address：https://github.com/HiCoinCom/php-sdk
 
+node SDK address：https://github.com/HiCoinCom/js-sdk
+
 **API**：See the API interface
 
 .. toctree::
