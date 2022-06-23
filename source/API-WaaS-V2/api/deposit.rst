@@ -12,19 +12,19 @@ Synchronize deposit records
 
 
 ========= ========== ============= =======================================================
-Param	    type       required      Description
-app_id	  String	   optional	     merchant unique identifier
-data      String	   optional	     encrypted String decrypted format defined as follows:
+Param	  type       required      Description
+app_id	  String     optional	   merchant unique identifier
+data      String     optional	   encrypted String decrypted format defined as follows:
 ========= ========== ============= =======================================================
 
 :Data structure after decryption of request parameter data:
 
 ========= ========== ============= =============================================================
-Param	    type       required      Description
-time	    long	     required	     current timestamp
+Param	  type       required      Description
+time	  long	     required	   current timestamp
 charset   String     required      encoding format, no special case, pass parameter UTF-8
 version   String     required      interface version number, no special case, pass parameter v2
-max_id	  int	       required	     returns 100 records greater than id
+max_id	  int	     required	   returns 100 records greater than id
 ========= ========== ============= =============================================================
 
 
@@ -39,16 +39,16 @@ max_id	  int	       required	     returns 100 records greater than id
 
 
 ========= ========== ============= ========================================================
-Param	    type       required      Description
-data      String     optional       encrypted String decrypted format defined as follows:
+Param	  type       required      Description
+data      String     optional      encrypted String decrypted format defined as follows:
 ========= ========== ============= ========================================================
 
 
 :After the response parameter data is decrypted:
 
 ========= ========== ============= =================================================================
-Param	    type       required      Description
-code	    String     required	     status code
+Param	  type       required      Description
+code	  String     required	   status code
 msg       String     required      the description of the response result
 data      String     optional      specific response data the data structure is defined as follows:
 ========= ========== ============= =================================================================
@@ -68,7 +68,7 @@ updated_at            Long       required    change time
 txid                  String     required    blockchain transaction ID
 confirmations         int        required    number of blockchain confirmations
 address_to            String     required    depositing account address
-status                int        required    0 to be confirmed, 1 completed, 2 abnormal
+status                int        required    0 to be confirmed, 1 success, 2 failed, 4 pending KYT verification, 5 pending manual review (KYT risk level too high), 6 Pending manual review (KYT Deposit Circuit Breaker)
 ===================== ========== =========== =================================================
 
 
@@ -146,19 +146,19 @@ Batch access depositing records
 :Request method:
 
 ========= ========== ============= ========================================================
-Param	    type       required      Description
-app_id	  String	   optional	     merchant unique identifier
-data      String	   optional	     encrypted String decrypted format defined as follows:
+Param	  type       required      Description
+app_id	  String     optional	   merchant unique identifier
+data      String     optional	   encrypted String decrypted format defined as follows:
 ========= ========== ============= ========================================================
 
 :Data structure after decryption of request parameter data:
 
 ========= ======= ========== ================================================================
 Param     type    required   Description
-time      long    required	 current timestamp
+time      long    required   current timestamp
 charset   String  required   encoding format, no special case, pass parameter UTF-8
 version   String  required   interface version number, no special case, pass parameter v2
-ids       String  required	 multiple top-up IDs separated by commas, up to 100 IDs
+ids       String  required   multiple top-up IDs separated by commas, up to 100 IDs
 ========= ======= ========== ================================================================
 
 ::
@@ -170,7 +170,7 @@ ids       String  required	 multiple top-up IDs separated by commas, up to 100 I
 :Response parameters:
 
 ========= ========== ============= ====================================================================
-Param	    type       required      Description
+Param	  type       required      Description
 data      String     optional      encrypted String decrypted format defined as follows:
 ========= ========== ============= ====================================================================
 
@@ -178,8 +178,8 @@ data      String     optional      encrypted String decrypted format defined as 
 :After the response parameter data is decrypted:
 
 ========= ========== ============= ======================================================================
-Param	    type       required      Description
-code	    String     required	     status code
+Param	  type       required      Description
+code	  String     required	   status code
 msg       String     required      the description of the response result
 data      String     optional      the specific response data the data structure is defined as follows:
 ========= ========== ============= ======================================================================
@@ -198,7 +198,7 @@ updated_at       Long     required   change time, timestamp
 txid             String   required   blockchain transaction ID
 confirmations    int      required   number of blockchain confirmations
 address_to       String   required   depositing account address
-status           int      required   0 to be confirmed, 1 completed, 2 abnormal
+status           int      required   0 to be confirmed, 1 success, 2 failed, 4 pending KYT verification, 5 pending manual review (KYT risk level too high), 6 Pending manual review (KYT Deposit Circuit Breaker)
 =============== ========= ========== ====================================================
 
 
@@ -259,9 +259,9 @@ Non sync callback notification for user deposit
 
 
 ========= ========== ============= ===========================================================
-Param	    type       required      Description
-app_id	  String	   optional	     merchant unique identifier
-data      String	   optional	     encrypted String decrypted format is defined as follows:
+Param	  type       required      Description
+app_id	  String     optional	   merchant unique identifier
+data      String     optional	   encrypted String decrypted format is defined as follows:
 ========= ========== ============= ===========================================================
 
 
@@ -269,8 +269,8 @@ data      String	   optional	     encrypted String decrypted format is defined a
 
 Deposit Notice：
 
-===================== ========== ============= =====================================================================================
-Param	                 type      required      Description
+=====================  ========= ============= =====================================================================================
+Param	               type      required      Description
 charset                String    required      the encoding format, no special case, pass the argument UTF-8
 version                String    required      the interface version number, no special case, pass the parameter v2
 side                   String    required      notification type, recharge notice: deposit, withdrawal notice: withdraw
@@ -284,7 +284,7 @@ created_at             string    required      the creation time
 updated_at             string    required      the change time
 txid                   string    required      blockchain transaction ID
 confirmations          string    required      the number of blockchain confirmations
-status                 string    required      the depositing status 0 to be confirmed, 1 completed, and 2 abnormal
+status                 string    required      the depositing status 0 to be confirmed, 1 success, 2 failed, 4 pending KYT verification, 5 pending manual review (KYT risk level too high), 6 Pending manual review (KYT Deposit Circuit Breaker)
 ===================== ========== ============= =====================================================================================
 
 
@@ -311,9 +311,9 @@ Collect miner fees
 
 
 ========= ========== ============= =======================================================================
-Param	    type       repuired      Description
-app_id	  String	   optional	     Merchant's unique identification
-data      String	   optional	     The encrypted string and the decrypted format are defined as follows:
+Param	  type       repuired      Description
+app_id	  String     optional	   Merchant's unique identification
+data      String     optional	   The encrypted string and the decrypted format are defined as follows:
 ========= ========== ============= =======================================================================
 
 
@@ -321,11 +321,11 @@ data      String	   optional	     The encrypted string and the decrypted format 
 
 
 ===================== ========== ============= ===================================================================
-Param	                 type       repuired     Description
-time                   long       repuired     Current timestamp
-charset                String     repuired     Coding format, no special case, transfer parameter UTF-8
-version                String     repuired     Interface version number, no special case, transfer parameter v2
-max_id                 int        repuired     Return the data of 100 collected miner fee records greater than ID
+Param	              type       repuired     Description
+time                  long       repuired     Current timestamp
+charset               String     repuired     Coding format, no special case, transfer parameter UTF-8
+version               String     repuired     Interface version number, no special case, transfer parameter v2
+max_id                int        repuired     Return the data of 100 collected miner fee records greater than ID
 ===================== ========== ============= ===================================================================
 
 
@@ -340,7 +340,7 @@ max_id                 int        repuired     Return the data of 100 collected 
 :Response parameters:
 
 ========= ========== ============= ===================================================================================
-Param	    type       repuired      Description
+Param	  type       repuired      Description
 data      String     optional      The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= ===================================================================================
 
@@ -348,8 +348,8 @@ data      String     optional      The encrypted string and the decrypted format
 :After the response parameter data is decrypted:
 
 ========= ========== ============= ==========================================================================
-Param	    type       repuired      Description
-code	    String     repuired	     Status code
+Param	  type       repuired      Description
+code      String     repuired	   Status code
 msg       String     repuired      Response result description
 data      String     optional      For specific response data, the data structure is defined as follows
 ========= ========== ============= ==========================================================================
@@ -366,7 +366,7 @@ created_at         Long        repuired     Creation time
 updated_at         Long        repuired     Revision time
 txid               String      repuired     Blockchain transaction ID
 confirmations      int         repuired     Number of blockchain confirmations
-status             int         repuired     0 to be confirmed, 1 completed, 2 abnormal
+status             int         repuired     0 to be confirmed, 1 success, 2 failed, 4 pending KYT verification, 5 pending manual review (KYT risk level too high), 6 Pending manual review (KYT Deposit Circuit Breaker)
 address_to         String      repuired     depositing to account address
 address_from       String      repuired     depositing sending address
 txid_type          String      repuired     0 chain transaction, 1 union transfer transaction
