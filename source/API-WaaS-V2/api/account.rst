@@ -133,8 +133,9 @@ data      String     optional      the specific response data
 
 ========== ======= =========== ====================================================
 Param      type    required    Description
-symbol     String  required    currency
+symbol     String  required    currency(Be sure to use the value returned by this field when calling the interface to withdraw coins, and any query interface)
 icon       String  required    currency icon
+real_symbol String  required   Cryptocurrency on-chain names
 ========== ======= =========== ====================================================
 
 
@@ -154,18 +155,19 @@ icon       String  required    currency icon
     "data":[
         {
             "symbol":"BTC",
-            "icon":"http://chainup-oss.oss-cn-beijing.aliyuncs.com/saas/1565681771193.png"
-        },
-        {
-            "symbol":"ETH",
-            "icon":"http://hicoin.oss-cn-hongkong.aliyuncs.com/coin/1530015263780.png"
-        },
-        {
-            "symbol":"BCH",
-            "icon":"http://hicoin.oss-cn-hongkong.aliyuncs.com/coin/1530016466295.png"
-        }
-    ],
-    "msg":"success"
+            "icon":"http://chainup-oss.oss-cn-beijing.aliyuncs.com/saas/1565681771193.png",
+            "real_symbol":"BTC",
+            "decimals":"8",
+            "name":"Bitcoin",
+            "base_symbol":"BTC",
+            "contract_address":"",
+            "deposit_confirmation":"2",
+            "explorer":"https://btc.com/",
+            "address_regex":"^(1|3)[a-zA-Z0-9]{24,36}$",
+            "address_tag_regex":"",
+            "support_memo":"0",
+            "support_token":"0"
+	    
   }
 
 
