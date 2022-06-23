@@ -131,14 +131,22 @@ data      String     optional      the specific response data
 
 :Data structure:
 
-============== ======= =========== ====================================================
-Param          type    required    Description
-symbol         String  required    currency(Be sure to use the value returned by this field when calling the interface to withdraw coins, and any query interface)
-icon           String  required    currency icon
-real_symbol    String  required    Cryptocurrency on-chain names
-decimals       String  required    decimals
-name           String  required    Full name of coin
-============== ======= =========== ====================================================
+===================== ======= =========== ====================================================
+Param                 type    required    Description
+symbol                String  required    currency(Be sure to use the value returned by this field when calling the interface to withdraw coins, and any query interface)
+icon                  String  required    currency icon
+real_symbol           String  required    Cryptocurrency on-chain names
+decimals              String  required    Decimals
+name                  String  required    Full name of coin
+base_symbol           String  required    Main Chain Coin Name
+contract_address      String  required    Contract Address
+deposit_confirmation  String  required    Deposit confirmation
+explorer              String  required    Explorer
+address_regex         String  required    Address regex
+address_tag_regex     String  required    Address tag regex
+support_memo          String  required    Whether memo is supported, 0 not supported 1 supported
+support_token         String  required    Whether to support token coins, 0 does not support 1 supports, only main chain coins have value, tokens are empty
+===================== ======= =========== ====================================================
 
 
 
