@@ -135,7 +135,6 @@ data      String     optional      the specific response data
 Param      type    required    Description
 symbol     String  required    currency(Be sure to use the value returned by this field when calling the interface to withdraw coins, and any query interface)
 icon       String  required    currency icon
-real_symbol String  required   Cryptocurrency on-chain names
 ========== ======= =========== ====================================================
 
 
