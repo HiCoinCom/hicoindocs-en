@@ -6,7 +6,7 @@ Query user information
 -------------------
 
 :Description: Query user information
-:Interface address: /api/v2/user/info
+:Interface address:/api/v2/user/info
 :Request method:  GET
 :Request parameters:
 
