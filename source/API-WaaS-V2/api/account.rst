@@ -40,7 +40,7 @@ email     string    optional   Email, Phone, and Email must be made sure that on
 :Response parameters:
 
 ========= ========== ============= ===================================================
-Param	    type       required      Description
+Param	  type       required      Description
 data      String     optional      decrypted format is defined as follows
 ========= ========== ============= ===================================================
 
@@ -48,8 +48,8 @@ data      String     optional      decrypted format is defined as follows
 :After the response parameter data is decrypted:
 
 ========= ========== ============= ===================================================
-Param	    type       required      Description
-code	    String     required	     status code
+Param	  type       required      Description
+code	  String     required	   status code
 msg       String     required      the description of the response result
 data      String     optional      the specific response data
 ========= ========== ============= ===================================================
@@ -90,16 +90,16 @@ Obtain a list of supported currencies
 :Request parameters:
 
 ========= ========== ============= =========================================================
-Param	    type       required      Description
-app_id	  String	   optional	     merchant unique identifier
-data      String	   optional	     encrypted String, decrypted format is defined as follows
+Param	  type       required      Description
+app_id	  String     optional	   merchant unique identifier
+data      String     optional	   encrypted String, decrypted format is defined as follows
 ========= ========== ============= =========================================================
 
 :Data structure after decryption of request parameter data:
 
 ========= ======= ========== ===============================================================
 Param     type    required   Description
-time      long    required	 current timestamp
+time      long    required   current timestamp
 charset   String  required   encoding format, no special case, pass parameter UTF-8
 version   String  required   interface version number, no special case, pass parameter v2
 ========= ======= ========== ===============================================================
@@ -115,7 +115,7 @@ version   String  required   interface version number, no special case, pass par
 :Response parameters:
 
 ========= ========== ============= ===========================================================
-Param	    type       required      Description
+Param	  type       required      Description
 data      String     optional      encrypted String, decrypted format is defined as follows
 ========= ========== ============= ===========================================================
 
@@ -123,8 +123,8 @@ data      String     optional      encrypted String, decrypted format is defined
 :After the response parameter data is decrypted:
 
 ========= ========== ============= ===================================================
-Param	    type       required      Description
-code	    String     required	     status code
+Param     type       required      Description
+code	  String     required	   status code
 msg       String     required      the description of the response result
 data      String     optional      the specific response data
 ========= ========== ============= ===================================================
@@ -186,9 +186,9 @@ Obtain the account information for the specified user
 :Request parameters:
 
 ========= ========== ============= =======================================================
-Param	    type       required      Description
-app_id	  String	   optional	     merchant unique identifier
-data      String	   optional	     encrypted String decrypted format defined as follows:
+Param	  type       required      Description
+app_id	  String     optional	   merchant unique identifier
+data      String     optional	   encrypted String decrypted format defined as follows:
 ========= ========== ============= =======================================================
 
 :Data structure after decryption of request parameter data:
@@ -198,8 +198,8 @@ Param     type    required   Description
 time      long    required   current timestamp
 charset   String  required   encoding format, no special case, pass parameter UTF-8
 vesion    String  required   interface version number, no special case, pass parameter v2
-uid       String  required	 user ID
-symbol    String  required	 currency
+uid       String  required   user ID
+symbol    String  required   currency
 ========= ======= ========== =============================================================
 
 
@@ -214,7 +214,7 @@ symbol    String  required	 currency
 :Response parameters:
 
 ========= ========== ============= =======================================================
-Param	    type       required      Description
+Param	  type       required      Description
 data      String     optional      encrypted String decrypted format defined as follows:
 ========= ========== ============= =======================================================
 
@@ -222,8 +222,8 @@ data      String     optional      encrypted String decrypted format defined as 
 :After the response parameter data is decrypted:
 
 ========= ========== ============= ======================================================================
-Param	    type       required      Description
-code	    String     required	     status code
+Param	  type       required      Description
+code	  String     required	   status code
 msg       String     required      the description of the response result
 data      String     optional      the specific response data the data structure is defined as follows:
 ========= ========== ============= ======================================================================
@@ -231,7 +231,7 @@ data      String     optional      the specific response data the data structure
 :Data structure:
 
 ================= ========== ============= ===================================================
-Param	            type       required      Description
+Param	          type       required      Description
 normal_balance    String     required      normal account balance
 lock_balance      String     required      freeze account balance
 deposit_address   String     required      deposit_address
@@ -265,9 +265,9 @@ Obtain the balance of merchant collection account
 :Request parameters:
 
 ========= ========== ============= =======================================================
-Param	    type       required      Description
-app_id	  String	   optional	     merchant unique identifier
-data      String	   optional	     encrypted String decrypted format defined as follows:
+Param	  type       required      Description
+app_id	  String     optional	   merchant unique identifier
+data      String     optional      encrypted String decrypted format defined as follows:
 ========= ========== ============= =======================================================
 
 :Data structure after decryption of request parameter data:
@@ -277,7 +277,7 @@ Param     type    required   Description
 time      long    required   current timestamp
 charset   String  required   encoding format, no special case, pass parameter UTF-8
 vesion    String  required   interface version number, no special case, pass parameter v2
-symbol    String  required	 currency
+symbol    String  required   currency
 ========= ======= ========== ==============================================================
 
 
@@ -291,7 +291,7 @@ symbol    String  required	 currency
 :Response parameters:
 
 ========= ========== ============= =======================================================
-Param	    type       required      Description
+Param	  type       required      Description
 data      String     optional      encrypted String decrypted format defined as follows
 ========= ========== ============= =======================================================
 
@@ -299,8 +299,8 @@ data      String     optional      encrypted String decrypted format defined as 
 :After the response parameter data is decrypted:
 
 ========= ========== ============= ==========================================================================
-Param	    type       required      Description
-code	    String     required	     status code
+Param	  type       required      Description
+code	  String     required	   status code
 msg       String     required      the description of the response result
 data      String     optional      the specific response data the data structure is defined as follows:
 ========= ========== ============= ==========================================================================
@@ -308,7 +308,7 @@ data      String     optional      the specific response data the data structure
 :Data structure:
 
 ================= ========== ============= ===================================================
-Param	            type       required      Description
+Param	          type       required      Description
 symbol            String     required      currency name
 balance           String     required      collection account balance
 ================= ========== ============= ===================================================
