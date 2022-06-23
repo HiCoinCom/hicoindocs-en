@@ -131,11 +131,14 @@ data      String     optional      the specific response data
 
 :Data structure:
 
-========== ======= =========== ====================================================
-Param      type    required    Description
-symbol     String  required    currency(Be sure to use the value returned by this field when calling the interface to withdraw coins, and any query interface)
-icon       String  required    currency icon
-========== ======= =========== ====================================================
+============== ======= =========== ====================================================
+Param          type    required    Description
+symbol         String  required    currency(Be sure to use the value returned by this field when calling the interface to withdraw coins, and any query interface)
+icon           String  required    currency icon
+real_symbol    String  required    Cryptocurrency on-chain names
+decimals       String  required    decimals
+name           String  required    Full name of coin
+============== ======= =========== ====================================================
 
 
 
