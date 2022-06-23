@@ -11,22 +11,22 @@ Query user information
 :Request parameters:
 
 ========= ========== ============= ===================================================
-Param	    type       required      Description
-app_id	  String	   optional	     merchant unique identifier
-data      String	   optional	     decrypted format is defined as follows
+Param	  type       required      Description
+app_id	  String     optional	   merchant unique identifier
+data      String     optional	   decrypted format is defined as follows
 ========= ========== ============= ===================================================
 
 :Data structure after decryption of request parameter data:
 
-========= ======= ========== =================================================================================
-Param     type    required   Description
-time      long    required   current timestamp
-charset   String  required   encoding format, no special case, pass parameter UTF-8
-version   String  required   interface version number, no special case, pass parameter v2
-country	  String	optional	 Country number, Mobile is not empty, this field is required. Such as: 86
-mobile	  String	optional	 Phone Number, Phone and Email must be made sure that one of them is not empty
-email     string	optional	 Email, Phone, and Email must be made sure that one of them is not empty
-========= ======= ========== =================================================================================
+========= ========= ========== =================================================================================
+Param     type      required   Description
+time      long      required   current timestamp
+charset   String    required   encoding format, no special case, pass parameter UTF-8
+version   String    required   interface version number, no special case, pass parameter v2
+country	  String    optional   Country number, Mobile is not empty, this field is required. Such as: 86
+mobile	  String    optional   Phone Number, Phone and Email must be made sure that one of them is not empty
+email     string    optional   Email, Phone, and Email must be made sure that one of them is not empty
+========= ========= ========== =================================================================================
 
 
 :Example request parameters:
