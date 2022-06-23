@@ -11,24 +11,24 @@ A withdrawal
 :Request parameters:
 
 ========= ========== ============= ===================================================================================
-Param	    type       required       Description
-app_id	  String	   Optional	      Merchant's unique expression
-data      String	   Optional	      The encrypted string and the decrypted format are defined as follows
+Param	  type       required      Description
+app_id	  String     Optional	   Merchant's unique expression
+data      String     Optional      The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= ===================================================================================
 
 :Data structure after decryption of request parameter data:
 
-============ ======= ============= =======================================================================================================================================
-Param        type    required       Description
-time         long    required	      Current timestamp
-charset      String  required       Coding format, no special case, transfer parameter UTF-8
-version      String  required       Interface version number, no special case, transfer parameter v2
-request_id   String  required       Request unique identification, up to 64 bits
-from_uid     String  required       Transfer out user ID
-to_address   String  required       Transfer in the user address, memo type, use "_" For example:eos_24545
-amount       String  required       Withdrawal amount, including withdrawal service charge; The service charge needs to be configured in the background of the merchant
-symbol       String  required       Withdrawal currency
-============ ======= ============= =======================================================================================================================================
+============ ======= ============= ====================================================================================================================================
+Param        type    required      Description
+time         long    required	   Current timestamp
+charset      String  required      Coding format, no special case, transfer parameter UTF-8
+version      String  required      Interface version number, no special case, transfer parameter v2
+request_id   String  required      Request unique identification, up to 64 bits
+from_uid     String  required      Transfer out user ID
+to_address   String  required      Transfer in the user address, memo type, use "_" For example:eos_24545
+amount       String  required      Withdrawal amount, including withdrawal service charge; The service charge needs to be configured in the background of the merchant
+symbol       String  required      Withdrawal currency
+============ ======= ============= ================================================================================================================================
 
 
 :Example request parameters:
@@ -43,7 +43,7 @@ symbol       String  required       Withdrawal currency
 
 
 ========= ========== ============= =========================================================================================
-Param	    type       required       Description
+Param	  type       required       Description
 data      String     Optional       The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= =========================================================================================
 
@@ -51,10 +51,10 @@ data      String     Optional       The encrypted string and the decrypted forma
 :After the response parameter data is decrypted:
 
 ========= ========== ============= ===============================================================================
-Param	    type       required        Description
-code	    String     required	       Status code
-msg       String     required        Response result description
-data      String     Optional        For specific response data, the data structure is defined as follows
+Param	  type       required      Description
+code      String     required      Status code
+msg       String     required      Response result description
+data      String     Optional      For specific response data, the data structure is defined as follows
 ========= ========== ============= ===============================================================================
 
 
@@ -62,8 +62,8 @@ data      String     Optional        For specific response data, the data struct
 :After the response parameter data is decrypted:
 
 ============== ======= ======== ========================================================================================================
-param          type    required  Description
-status         string  required  0 not approved, 1 approved, 2 rejected, 3 typed in payment, 4 failed, 5 completed, 6 cancelled
+param          type    required Description
+status         string  required 0 under review by risk control, 1 in payment, 2 audit rejection, 4 failed, 5 success, 6 cancelled , 7 pending KYT verification, 8 pending manual review (KYT risk level too high)
 ============== ======= ======== ========================================================================================================
 
 
@@ -94,16 +94,16 @@ Second confirmation of withdrawal information
 
 
 ========= ========== ============= =============================================================================
-Param	    type       required      Description
-app_id	  String	   Optional	     Merchant's unique identification
-data      String	   Optional	     The encrypted string and the decrypted format are defined as follows
+Param	  type       required      Description
+app_id	  String     Optional	   Merchant's unique identification
+data      String     Optional	   The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= =============================================================================
 
 :Data structure after decryption of request parameter data:
 
-============== ========== ============= =========================================================================================================================================================
+============== =========== =============== ===================================================================================================================
 Param          type        required        Description
-time	         long	       required        Current timestamp
+time	       long	   required        Current timestamp
 charset        String      required        Coding format, no special case, transfer parameter UTF-8
 version        String      required        Interface version number, no special case, transfer parameter v2
 request_id     String      required        Request unique identity
@@ -112,7 +112,7 @@ to_address     String      required        Transfer in user address
 amount         String      required        Withdrawal amount, including withdrawal service charge; The service charge needs to be configured in the background of the merchant
 symbol         String      required        Withdrawal currency
 check_sum      String      required        Random check code. The third party returns this field as it is. The platform considers it successful
-============== ========== ============= =========================================================================================================================================================
+============== =========== =============== ===================================================================================================================
 
 
 :Example request parameters:
@@ -125,16 +125,16 @@ check_sum      String      required        Random check code. The third party re
 :Response parameters:
 
 ========= ========== ============= ==========================================================================
-Param	    type       required       Description
-data      String     Optional       The encrypted string and the decrypted format are defined as follows
+Param	  type       required      Description
+data      String     Optional      The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= ==========================================================================
 
 :Data structure:
 
 =============== ========= ========== ====================================================
-Param            type      required   Description
-check_sum        String    required   Check in request parameter check_sum
-time             String    Optional   time stamp
+Param           type      required   Description
+check_sum       String    required   Check in request parameter check_sum
+time            String    Optional   time stamp
 =============== ========= ========== ====================================================
 
 :Example response:
@@ -163,9 +163,9 @@ Asynchronous callback notification of user withdrawal
 
 
 ========= ========== ============= ===========================================================================
-Param	    type       required      Description
-app_id	  String	   可选	          Merchant's unique identification
-data      String	   可选	          The encrypted string and the decrypted format are defined as follows
+Param	  type       required      Description
+app_id	  String     optional	   Merchant's unique identification
+data      String     optional	   The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= ===========================================================================
 
 
@@ -173,8 +173,8 @@ data      String	   可选	          The encrypted string and the decrypted form
 
 Withdrawal notice：
 
-===================== ========== ============= ============================================================================================================
-Param	                 type        required       Description
+====================== =========== ============== ============================================================================================================
+Param	               type        required       Description
 charset                String      required       Coding format, no special case, transfer parameter UTF-8
 version                String      required       Interface version number, no special case, transfer parameter v2
 side                   String      required       Notice type, recharge notice: deposit, withdrawal notice: withdraw
@@ -193,7 +193,7 @@ created_at             String      required       Creation time
 updated_at             String      required       Revision time
 txid                   String      required       Blockchain transaction ID
 confirmations          String      required       Number of blockchain confirmations
-status                 String      required       Withdrawal status: 0 not approved, 1 approved, 2 rejected, 3 in payment, 4 failed, 5 completed
+status                 String      required       Withdrawal status: 0 under review by risk control, 1 in payment, 2 audit rejection, 4 failed, 5 success, 6 cancelled , 7 pending KYT verification, 8 pending manual review (KYT risk level too high)
 ===================== ========== ============= ============================================================================================================
 
 
@@ -221,20 +221,20 @@ Synchronize withdrawal records
 :Request parameters:
 
 ========= ========== ============= ===========================================================================
-Param	    type       required      Description
-app_id	  String	   Optional	     Merchant's unique identification
-data      String	   Optional	     The encrypted string and the decrypted format are defined as follows
+Param	  type       required      Description
+app_id	  string     optional	   Merchant's unique identification
+data      string     optional	   The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= ===========================================================================
 
 :Data structure after decryption of request parameter data:
 
-========= ======= ========== ============================================================================
+========= ======= =========== ============================================================================
 Param     type    required    Description
-time      long    required	  Current timestamp
+time      long    required    Current timestamp
 charset   String  required    Coding format, no special case, transfer parameter UTF-8
 version   String  required    Interface version number, no special case, transfer parameter v2
-max_id    String  required	  Return 100 recharge record data greater than ID
-========= ======= ========== ============================================================================
+max_id    String  required    Return 100 recharge record data greater than ID
+========= ======= =========== ============================================================================
 
 
 :Example request parameters:
@@ -247,16 +247,16 @@ max_id    String  required	  Return 100 recharge record data greater than ID
 :Response parameters:
 
 ========= ========== ============= ================================================================================
-Param	    type       required       Description
+Param	  type       required       Description
 data      String     Optional       The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= ================================================================================
 
 
 :After the response parameter data is decrypted:
 
-========= ========== ============= ==========================================================================
-Param	    type       required        Description
-code	    String     required	       Status code
+========= ========== =============== ==========================================================================
+Param	  type       required        Description
+code	  String     required	     Status code
 msg       String     required        Response result description
 data      String     Optional        For specific response data, the data structure is defined as follows
 ========= ========== ============= ==========================================================================
@@ -283,7 +283,7 @@ txid                  String     required   Blockchain transaction ID
 confirmations         int        required   Number of blockchain confirmations
 saas_status           int        required   Platform audit status: 0 not approved, 1 reviewed, 2 rejected
 company_status        int        required   Merchant audit status: 0 not approved, 1 reviewed, 2 rejected
-status                int        required   Withdrawal status: 0 not approved, 1 approved, 2 rejected, 3 in payment, 4 failed, 5 completed, 6 cancelled
+status                int        required   Withdrawal status: 0 under review by risk control, 1 in payment, 2 audit rejection, 4 failed, 5 success, 6 cancelled , 7 pending KYT verification, 8 pending manual review (KYT risk level too high)
 ===================== ========= ========== ========================================================================================================================
 
 
@@ -338,19 +338,19 @@ Batch access to withdrawal records
 :Request parameters:
 
 ========= ========== ============= =============================================================================
-Param	    type       required       Description
-app_id	  String	   Optional	      Merchant's unique identification
-data      String	   Optional	      The encrypted string and the decrypted format are defined as follows
+Param	  type       required      Description
+app_id	  String     Optional	   Merchant's unique identification
+data      String     Optional      The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= =============================================================================
 
 :Data structure after decryption of request parameter data:
 
 ========= ========== ============= =================================================================================
-Param	    type       required        Description
-time	    long	     required	       Current timestamp
-charset   String     required        Coding format, no special case, transfer parameter UTF-8
-version   String     required        Interface version number, no special case, transfer parameter v2
-ids       String	   required	       Multiple requests_id are separated by commas, up to 100 requests_id
+Param	  type       required      Description
+time      long	     required      Current timestamp
+charset   String     required      Coding format, no special case, transfer parameter UTF-8
+version   String     required      Interface version number, no special case, transfer parameter v2
+ids       String     required      Multiple requests_id are separated by commas, up to 100 requests_id
 ========= ========== ============= =================================================================================
 
 
@@ -365,7 +365,7 @@ ids       String	   required	       Multiple requests_id are separated by commas
 
 
 ========= ========== ============= ===============================================================================
-Param	    type       required       Description
+Param	  type       required       Description
 data      String     Optional       The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= ===============================================================================
 
@@ -373,15 +373,15 @@ data      String     Optional       The encrypted string and the decrypted forma
 :After the response parameter data is decrypted:
 
 ========= ========== ============= ==================================================================================
-Param	    type       required        Description
-code	    String     required	       Status code
-msg       String     required        Response result description
-data      String     Optional        For specific response data, the data structure is defined as follows
+Param     type       required      Description
+code      String     required	   Status code
+msg       String     required      Response result description
+data      String     Optional      For specific response data, the data structure is defined as follows
 ========= ========== ============= ==================================================================================
 
 :Data structure:
 
-===================== ========= ========== =============================================================================================================================
+===================== ========== ============ =============================================================================================================
 Param                 type       required     Description
 request_id            String     required     Request ID
 id                    int        required     Withdrawal ID
@@ -400,8 +400,8 @@ txid                  String     required     Blockchain transaction ID
 confirmations         int        required     Number of blockchain confirmations
 saas_status           int        required     Platform audit status
 company_status        int        required     Merchant audit status
-status                int        required     Withdrawal status: 0 not approved, 1 approved, 2 rejected, 3 in payment, 4 failed, 5 completed, 6 cancelled
-===================== ========= ========== =============================================================================================================================
+status                int        required     Withdrawal status: 0 under review by risk control, 1 in payment, 2 audit rejection, 4 failed, 5 success, 6 cancelled , 7 pending KYT verification, 8 pending manual review (KYT risk level too high)
+===================== ========= ========== =======================================================================================================================
 
 
 :Example response:
