@@ -18,7 +18,7 @@ data      String     Optional      The encrypted string and the decrypted format
 
 :Data structure after decryption of request parameter data:
 
-============ ======= ============= ================================================================================================================================
+============ ======= ============= =====================================================================================================================================
 Param        type    required      Description
 time         long    required	   Current timestamp
 charset      String  required      Coding format, no special case, transfer parameter UTF-8
@@ -28,7 +28,7 @@ from_uid     String  required      Transfer out user ID
 to_address   String  required      Transfer in the user address, memo type, use "_" For example:eos_24545
 amount       String  required      Withdrawal amount, including withdrawal service charge; The service charge needs to be configured in the background of the merchant
 symbol       String  required      Withdrawal currency
-============ ======= ============= ================================================================================================================================
+============ ======= ============= =====================================================================================================================================
 
 
 :Example request parameters:
