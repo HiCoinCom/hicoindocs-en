@@ -11,20 +11,20 @@ User Mobile Registration
 :Request parameters:
 
 ========= ========== ============= ====================================================================
-Param	    type       required       Description
-app_id	  String	   optional	      merchant unique identifier
-data      String	   optional	      encrypted String,  decrypted format is defined as follows
+Param	  type       required      Description
+app_id	  String     optional	   merchant unique identifier
+data      String     optional	   encrypted String,  decrypted format is defined as follows
 ========= ========== ============= ====================================================================
 
 :Data structure after decryption of request parameter data:
 
 ========= ========== ============= ================================================================
-Param     type       required       Description
-time      long       required	      current timestamp
-charset   String     required       encoding format, no special case, pass parameter UTF-8
-version   String     required       interface version number, no special case, pass parameter v2
-country	  String	   required	      country number, e.g. 86 for China
-mobile	  String	   required	      mobile number
+Param     type       required      Description
+time      long       required	   current timestamp
+charset   String     required      encoding format, no special case, pass parameter UTF-8
+version   String     required      interface version number, no special case, pass parameter v2
+country	  String     required      country number, e.g. 86 for China
+mobile	  String     required      mobile number
 ========= ========== ============= ================================================================
 
 
@@ -39,7 +39,7 @@ mobile	  String	   required	      mobile number
 :Response parameters:
 
 ========= ========== ============= ===============================================================
-Param	    type       required       Description
+Param	  type       required       Description
 data      String     optional       encrypted String decrypted format is defined as follows：
 ========= ========== ============= ===============================================================
 
@@ -47,17 +47,17 @@ data      String     optional       encrypted String decrypted format is defined
 :After the response parameter data is decrypted:
 
 ========= ========== ============= ============================================================================
-Param	    type       required         Description
-code	    String     required	        status code
-msg       String     required         description of the response result
-data      String     optional         the specific response data, the data structure is defined as follows
+Param	  type       required      Description
+code	  String     required	   status code
+msg       String     required      description of the response result
+data      String     optional      the specific response data, the data structure is defined as follows
 ========= ========== ============= ============================================================================
 
 :Data structure:
 
 ========= ========== ============= ===================================================================
-Param	     type       required        Description
-uid        int        required        the unique identity of the user in the wallet service
+Param	  type       required      Description
+uid       int        required      the unique identity of the user in the wallet service
 ========= ========== ============= ===================================================================
 
 
@@ -88,20 +88,20 @@ User email registration
 :Request parameters:
 
 ========= ========== ============= ===============================================================
-Param	    type       required       Description
-app_id	  String	   optional	      merchant unique identifier
-data      String	   optional	      encrypted String decrypted format is defined as follows：
+Param	  type       required      Description
+app_id	  String     optional	   merchant unique identifier
+data      String     optional	   encrypted String decrypted format is defined as follows：
 ========= ========== ============= ===============================================================
 
 
 :Data structure after decryption of request parameter data:
 
 ========= ========== ============= =================================================================================
-Param	    type        required        Description
-time	    long	      required	      current timestamp
-charset   String      required        encoding format, no special case, pass parameter UTF-8
-version   String      required        interface version number, no special case, pass parameter v2
-email	    String	    required	      Email or Virtual Accounts, to ensure their uniqueness, up to 100 characters
+Param	  type       required      Description
+time	  long	     required	   current timestamp
+charset   String     required      encoding format, no special case, pass parameter UTF-8
+version   String     required      interface version number, no special case, pass parameter v2
+email	  String     required	   Email or Virtual Accounts, to ensure their uniqueness, up to 100 characters
 ========= ========== ============= =================================================================================
 
 
@@ -116,7 +116,7 @@ email	    String	    required	      Email or Virtual Accounts, to ensure their u
 :Response parameters:
 
 ========= ========== ============= ============================================================
-Param	    type       required       Description
+Param	  type       required       Description
 data      String     optional       encrypted String, decrypted format is defined as follows：
 ========= ========== ============= ============================================================
 
@@ -124,17 +124,17 @@ data      String     optional       encrypted String, decrypted format is define
 :After the response parameter data is decrypted:
 
 ========= ========== ============= ===================================================================================
-Param	    type       required        Description
-code	    String     required	       status code
-msg       String     required        the description of the response result
-data      String     optional        the specific response data  the data structure is defined as follows：
+Param	  type       required      Description
+code	  String     required	   status code
+msg       String     required      the description of the response result
+data      String     optional      the specific response data  the data structure is defined as follows：
 ========= ========== ============= ===================================================================================
 
 :Data structure:
 
 ========= ========== ============= =============================================================
 Param     type       required       Description
-uid        int       required       the unique identity of the user in the wallet service
+uid       int        required       the unique identity of the user in the wallet service
 ========= ========== ============= =============================================================
 
 
@@ -166,20 +166,20 @@ Obtain the address of the user specified currency
 
 
 ========= ========== ============= =============================================================
-Param	    type       required      Description
-app_id	  String	   optional	     merchant unique identifier
-data      String	   optional	     encrypted String decrypted format defined as follows:
+Param	  type       required      Description
+app_id	  String     optional	   merchant unique identifier
+data      String     optional	   encrypted String decrypted format defined as follows:
 ========= ========== ============= =============================================================
 
 :Data structure after decryption of request parameter data:
 
 ========= ======= ========== =====================================================================
-Param     type    required     Description
-time      long    required     current timestamp
-charset   String  required     encoding format, no special case, pass parameter UTF-8
-vesion    String  required     interface version number, no special case, pass parameter v2
-uid       String  required	   user ID
-symbol    String  required	   currency
+Param     type    required   Description
+time      long    required   current timestamp
+charset   String  required   encoding format, no special case, pass parameter UTF-8
+vesion    String  required   interface version number, no special case, pass parameter v2
+uid       String  required   user ID
+symbol    String  required   currency
 ========= ======= ========== =====================================================================
 
 
@@ -193,26 +193,26 @@ symbol    String  required	   currency
 :Response parameters:
 
 ========= ========== ============= ======================================================================
-Param	    type       required        Description
-data      String     optional        encrypted String decrypted format is defined as follows:
+Param	  type       required      Description
+data      String     optional      encrypted String decrypted format is defined as follows:
 ========= ========== ============= ======================================================================
 
 
 :After the response parameter data is decrypted:
 
 ========= ========== ============= ===========================================================================
-Param	    type       required         Description
-code	    String     required	        status code
-msg       String     required         the description of the response result
-data      String     optional         the specific response data  the data structure is defined as follows:
+Param	  type       required      Description
+code	  String     required	   status code
+msg       String     required      the description of the response result
+data      String     optional      the specific response data  the data structure is defined as follows:
 ========= ========== ============= ===========================================================================
 
 :Data structure:
 
 ========= ========= ============= ===================================================
-Param      type     required        Description
-uid        int      required             the unique identity of the user in the wallet service
-address    String   required             the currency account address
+Param     type     required       Description
+uid       int      required       the unique identity of the user in the wallet service
+address   String   required       the currency account address
 ========= ========= ============= ===================================================
 
 
