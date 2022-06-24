@@ -18,7 +18,7 @@ data      String     Optional      The encrypted string and the decrypted format
 
 :Data structure after decryption of request parameter data:
 
-============ ======= ============= ====================================================================================================================================
+============ ======= ============= ================================================================================================================================
 Param        type    required      Description
 time         long    required	   Current timestamp
 charset      String  required      Coding format, no special case, transfer parameter UTF-8
