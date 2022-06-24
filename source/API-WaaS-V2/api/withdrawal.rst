@@ -10,11 +10,11 @@ A withdrawal
 :Request method: POST
 :Request parameters:
 
-========= ========== ============= ===================================================================================
+========= ========== ============= ============================================================================================================
 Param	  type       required      Description
 app_id	  String     Optional	   Merchant's unique expression
 data      String     Optional      The encrypted string and the decrypted format are defined as follows
-========= ========== ============= ===================================================================================
+========= ========== ============= ============================================================================================================
 
 :Data structure after decryption of request parameter data:
 
@@ -93,11 +93,11 @@ Second confirmation of withdrawal information
 :Request parameters:
 
 
-========= ========== ============= =============================================================================
+========= ========== ============= ======================================================================================================
 Param	  type       required      Description
 app_id	  String     Optional	   Merchant's unique identification
 data      String     Optional	   The encrypted string and the decrypted format are defined as follows
-========= ========== ============= =============================================================================
+========= ========== ============= ======================================================================================================
 
 :Data structure after decryption of request parameter data:
 
@@ -220,11 +220,11 @@ Synchronize withdrawal records
 :Request method: GET
 :Request parameters:
 
-========= ========== ============= ===========================================================================
+========= ========== ============= ====================================================================================================
 Param	  type       required      Description
 app_id	  string     optional	   Merchant's unique identification
 data      string     optional	   The encrypted string and the decrypted format are defined as follows
-========= ========== ============= ===========================================================================
+========= ========== ============= ====================================================================================================
 
 :Data structure after decryption of request parameter data:
 
@@ -337,11 +337,11 @@ Batch access to withdrawal records
 :Request method: GET
 :Request parameters:
 
-========= ========== ============= =============================================================================
+========= ========== ============= ======================================================================================================
 Param	  type       required      Description
 app_id	  String     Optional	   Merchant's unique identification
 data      String     Optional      The encrypted string and the decrypted format are defined as follows
-========= ========== ============= =============================================================================
+========= ========== ============= ======================================================================================================
 
 :Data structure after decryption of request parameter data:
 
