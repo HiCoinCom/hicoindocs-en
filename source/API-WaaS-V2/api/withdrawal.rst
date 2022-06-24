@@ -381,7 +381,7 @@ data      String     Optional      For specific response data, the data structur
 
 :Data structure:
 
-===================== ========== ============ =============================================================================================================
+===================== ========== ============ ===========================================================================================================================
 Param                 type       required     Description
 request_id            String     required     Request ID
 id                    int        required     Withdrawal ID
@@ -401,7 +401,7 @@ confirmations         int        required     Number of blockchain confirmations
 saas_status           int        required     Platform audit status
 company_status        int        required     Merchant audit status
 status                int        required     Withdrawal status: 0 under review by risk control, 1 in payment, 2 audit rejection, 4 failed, 5 success, 6 cancelled , 7 pending KYT verification, 8 pending manual review (KYT risk level too high)
-===================== ========= ========== =======================================================================================================================
+===================== ========== ============ ===========================================================================================================================
 
 
 :Example response:
