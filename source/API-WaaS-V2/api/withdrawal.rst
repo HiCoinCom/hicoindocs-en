@@ -173,7 +173,7 @@ data      String     optional	   The encrypted string and the decrypted format a
 
 Withdrawal notice：
 
-====================== =========== ============== ============================================================================================================
+====================== =========== ============== ===========================================================================================================================
 Param	               type        required       Description
 charset                String      required       Coding format, no special case, transfer parameter UTF-8
 version                String      required       Interface version number, no special case, transfer parameter v2
@@ -194,7 +194,7 @@ updated_at             String      required       Revision time
 txid                   String      required       Blockchain transaction ID
 confirmations          String      required       Number of blockchain confirmations
 status                 String      required       Withdrawal status: 0 under review by risk control, 1 in payment, 2 audit rejection, 4 failed, 5 success, 6 cancelled , 7 pending KYT verification, 8 pending manual review (KYT risk level too high)
-====================== =========== ============== ============================================================================================================
+====================== =========== ============== ===========================================================================================================================
 
 
 :Example request parameters:
