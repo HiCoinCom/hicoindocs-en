@@ -12,9 +12,9 @@ Custody Merchant Transfer
 
 
 ========= ========== ============= =====================================================================
-Param	    type       required      Description
-app_id	  String	   Optional	     Merchant's unique identification
-data      String	   Optional	     The encrypted string and the decrypted format are defined as follows
+Param	  type       required      Description
+app_id	  String     Optional	   Merchant's unique identification
+data      String     Optional	   The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= =====================================================================
 
 :Data structure after decryption of request parameter data:
@@ -102,24 +102,24 @@ Transfer information is confirmed asynchronously
 
 
 ========= ========== ============= =============================================================================
-Param	    type       required      Description
-app_id	  String	   可选	          Merchant's unique identification
-data      String	   可选	          The encrypted string and the decrypted format are defined as follows
+Param	  type       required      Description
+app_id	  String     Optional	   Merchant's unique identification
+data      String     Optional	   The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= =============================================================================
 
 :Data structure after decryption of request parameter data:
 
 ============ =========== ============= ==============================================================================================================================
-Param	         type         required      Description
-time	         Long	        required	    Current timestamp
-charset        String       required      Coding format, no special case, transfer parameter UTF-8
-version        String       required      Interface version number, no special case, transfer parameter v2
-request_id     String       required      Request unique identification, up to 64 bits
-symbol	       String       required      currency
-amount         String       required      Transfer quantity, including transfer fees
-to             String       required      fill in merchant appid at present
-check_sum      String       required      Random check code. The third party returns this field as it is. The platform considers it successful
-remark         String       required      Remark Field
+Param	     type        required      Description
+time	     Long        required      Current timestamp
+charset      String      required      Coding format, no special case, transfer parameter UTF-8
+version      String      required      Interface version number, no special case, transfer parameter v2
+request_id   String      required      Request unique identification, up to 64 bits
+symbol	     String      required      currency
+amount       String      required      Transfer quantity, including transfer fees
+to           String      required      fill in merchant appid at present
+check_sum    String      required      Random check code. The third party returns this field as it is. The platform considers it successful
+remark       String      required      Remark Field
 ============ =========== ============= ==============================================================================================================================
 
 
@@ -150,9 +150,9 @@ data      String     Optional       For specific response data, the data structu
 :Data structure:
 
 ============ =========== ============= ==================================================================================================================
-Param	       type         required       Description
-time	       long	        required	     Current timestamp
-check_sum    String       required       Random check code. The third party returns this field as it is. The platform considers it successful
+Param	     type        required      Description
+time	     long        required      Current timestamp
+check_sum    String      required      Random check code. The third party returns this field as it is. The platform considers it successful
 ============ =========== ============= ==================================================================================================================
 
 
@@ -192,9 +192,9 @@ Batch query transfer records
 
 
 ========= ========== ============= ==============================================================================
-Param	    Type       required      Description
-app_id	  String	   Optional	     Merchant's unique identification
-data      String	   Optional	     The encrypted string and the decrypted format are defined as follows
+Param	  Type       required      Description
+app_id	  String     Optional	   Merchant's unique identification
+data      String     Optional	   The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= ==============================================================================
 
 :Data structure after decryption of request parameter data:
@@ -309,15 +309,15 @@ Synchronous transfer record
 
 
 ========= ========== ============= =================================================================================
-Param	    type       required       Description
-app_id	  String	   Optional	      Merchant's unique identification
-data      String	   Optional	      The encrypted string and the decrypted format are defined as follows
+Param	  type       required      Description
+app_id	  String     Optional	   Merchant's unique identification
+data      String     Optional	   The encrypted string and the decrypted format are defined as follows
 ========= ========== ============= =================================================================================
 
 :Data structure after decryption of request parameter data:
 ========= ========== ============= ====================================================================================
-Param	    type       required       Description
-time	    long	     required	      Current timestamp
+Param	  type       required       Description
+time	  long	     required	    Current timestamp
 charset   String     required       Coding format, no special case, transfer parameter UTF-8
 version   String     required       Interface version number, no special case, transfer parameter v2
 max_id    String     required       Return the data of 100 transfer records greater than ID
