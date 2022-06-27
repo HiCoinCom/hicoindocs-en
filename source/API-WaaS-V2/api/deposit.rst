@@ -321,11 +321,11 @@ data      String     optional	   The encrypted string and the decrypted format a
 
 
 ===================== ========== ============= ===================================================================
-Param	              type       repuired     Description
-time                  long       repuired     Current timestamp
-charset               String     repuired     Coding format, no special case, transfer parameter UTF-8
-version               String     repuired     Interface version number, no special case, transfer parameter v2
-max_id                int        repuired     Return the data of 100 collected miner fee records greater than ID
+Param	              type       repuired      Description
+time                  long       repuired      Current timestamp
+charset               String     repuired      Coding format, no special case, transfer parameter UTF-8
+version               String     repuired      Interface version number, no special case, transfer parameter v2
+max_id                int        repuired      Return the data of 100 collected miner fee records greater than ID
 ===================== ========== ============= ===================================================================
 
 
