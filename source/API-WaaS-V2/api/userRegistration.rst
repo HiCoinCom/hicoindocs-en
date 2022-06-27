@@ -210,9 +210,9 @@ data      String     optional      the specific response data  the data structur
 :Data structure:
 
 ========= ========= ============= ===================================================
-Param     type     required       Description
-uid       int      required       the unique identity of the user in the wallet service
-address   String   required       the currency account address
+Param     type      required      Description
+uid       int       required      the unique identity of the user in the wallet service
+address   String    required      the currency account address
 ========= ========= ============= ===================================================
 
 
