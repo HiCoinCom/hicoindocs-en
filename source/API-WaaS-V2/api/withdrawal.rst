@@ -259,8 +259,7 @@ Param	  type       required        Description
 code	  String     required	     Status code
 msg       String     required        Response result description
 data      String     Optional        For specific response data, the data structure is defined as follows
-========= ========== ============= ==========================================================================
-
+========= ========== =============== ==========================================================================
 
 :Data structure:
 
