@@ -178,8 +178,8 @@ support_token         String  required    Whether to support token coins, 0 does
             "support_memo":"0",
             "support_token":"0"    
         }
-    ]
-}
+     ]
+   }
 
 
 
