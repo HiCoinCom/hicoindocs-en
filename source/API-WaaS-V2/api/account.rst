@@ -176,11 +176,10 @@ support_token         String  required    Whether to support token coins, 0 does
             "address_regex":"^(1|3)[a-zA-Z0-9]{24,36}$",
             "address_tag_regex":"",
             "support_memo":"0",
-            "support_token":"0"
-	    
-  }
-
-
+            "support_token":"0"    
+        }
+    ]
+}
 
 
 
