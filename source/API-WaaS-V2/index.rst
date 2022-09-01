@@ -2,7 +2,7 @@
 Custody API Documentation V2
 ==============================================
 
-Thanks for visiting TopValue Digital Asset Custody Platform！
+Thanks for visiting The TopValue Digital Asset Custody Platform！
 TopValue digital asset custody platform has been developed with the highest level of security, which offers comprehensive reporting services to facilitate efficient and transparent management of your digital asset holdings with deep underlying wallet technology and architecture. We aim to remain at the forefront of cybersecurity and offer a global, standardized, resilient, insured and compliant custody service for the safekeeping of all our clients with incomparable user experience.
 
 
