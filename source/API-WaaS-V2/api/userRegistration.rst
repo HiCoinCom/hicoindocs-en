@@ -156,7 +156,7 @@ uid       int        required       the unique identity of the user in the walle
 
 
 
-Obtain the address of the user specified currency
+Obtain the address of the user-specified currency
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Description: To obtain the user specified currency account address. If there is no address, the user is assigned an address, and the account should not be generated. The account is still generated on demand.
