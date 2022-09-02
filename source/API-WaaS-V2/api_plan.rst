@@ -62,7 +62,7 @@ Complete personal verification and google authentication. (For security level 2,
 2.Create and configure a corporate wallet
 -------------------
 
-2.1 Log in to the ChainUP Custody platform
+2.1 Login to the ChainUP Custody platform
 ~~~~~~~~~~~~~~~~~~~
 
 Open ChainUP Custody platform (waas.chainup.com or custody.chainup.com) using any browser, scan the QR code and log in using the [TopValue] app or by scanning the QR code.
@@ -81,7 +81,7 @@ Enter the 【ChainUP Custody】 page and create a wallet. Please fill in the nam
    :width: 800px
    :align: center
 
-2.2 Add Currency
+2.3 Add Currency
 ~~~~~~~~~~~~~~~~~~~
 
 Before adding a currency, please contact the platform admin to add the main chain first. The corresponding token can only be used for free once the main chain currency has been added by the platform admin.
@@ -99,7 +99,7 @@ Go to the edit page and add the currency.
    :align: center
 
 
-2.3 Obtain API information
+2.4 Obtain API information
 ~~~~~~~~~~~~~~~~~~~
 
 Create APIs (Currently only allows permission and support one set of API)  
@@ -114,7 +114,7 @@ The API creation is completed and the public key information is available now.
    :width: 800px
    :align: center
 
-2.4 Development and Testing
+2.5 Development and Testing
 ~~~~~~~~~~~~~~~~~~~
 
 API documentation integration with the system based on the platform’s capabilities and solutions.
