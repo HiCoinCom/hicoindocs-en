@@ -249,7 +249,7 @@ status           int      required   0 to be confirmed, 1 success, 2 failed, 4 p
 
 
 
-Non sync callback notification for user deposit
+Nonsync callback notification for user deposit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Description: This interface only defines the interface specification, the specific interface needs to be implemented by the developer
