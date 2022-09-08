@@ -20,7 +20,7 @@ Note: If the client's project timeline is urgent, the necessary processes [obtai
 
 1）Customer registers with Custody system (email address is recommended)
 
-2）After successful registration, the address can be obtained through UID of Custody system
+2）After successful registration, the address can be obtained through the UID of the Custody system
 
 Note: Obtaining the address in advance helps to ensure efficient address allocation after user registration; If the user registers and then obtains the address through the interface, it may fail due to reasons such as network issue, resulting in users’ inability to use the services.
 
@@ -37,7 +37,7 @@ Note: Obtaining the address in advance helps to ensure efficient address allocat
 
 3）Users send coins to the address;
 
-4）The Custody system monitors and accounts the transaction of coins in the blockchain address on behalf of the clients, and notifies the client actively or automatically obtaining it within the system.
+4）The Custody system monitors and accounts for the transaction of coins in the blockchain address on behalf of the clients, and notifies the client actively or automatically obtaining it within the system.
 
 5）After the system confirms the validity of the information for coin deposit, the coins will be credited into the user’s account;
 
@@ -48,7 +48,7 @@ Note: Obtaining the address in advance helps to ensure efficient address allocat
    :align: center
 
 
-Note: The asynchronous callback of Custody system will be triggered when each order is final, and it can be sent up to 5 times per day;
+Note: The asynchronous callback of teh Custody system will be triggered when each order is final, and it can be sent up to 5 times per day;
 
 Timed task: a total of five callbacks
 
@@ -89,9 +89,9 @@ When the callback fails five times, the callback is stopped
 4.Financial reconciliation
 -------------------
 
-1）Perform checks on accounts between the customer system and Custody system on a periodic basis (daily is recommended)
+1）Perform checks on accounts between the customer system and Custody system periodically (daily is recommended)
 
-2）At 12am the next day, the system retrieves all the deposits and withdrawals for the previous day as well as the aggregated orders and collection of the miners’ fees
+2）At midnight the the next day, the system retrieves all the deposits and withdrawals for the previous day as well as the aggregated orders and collection of the miners’ fees
 
 3）The customer system’s orders are reconciled against those in the Custody system
 
@@ -103,10 +103,10 @@ When the callback fails five times, the callback is stopped
    :align: center
 
 
-Note: In the Custody system, there are three kinds of cost expenses in the tripartite system: collecting miners' fee, extracting miners' fee, and profit-sharing commission;
+Note: In the Custody system, there are three kinds of cost expenses in the tripartite system: collecting miners' fees, extracting miners' fees, and profit-sharing commission;
 
-a) Collection of Miners’ Fee: With each currency’s account type, after depositing the coins, the funds on the address will be collected to the hot wallet address and the block chain network. Part of the main chain block chain transaction will consume the miner fee, and the cost of which will be borne by the client. Client can contact us if they would like this capital expenditure will be handled by us;
+a) Collection of Miners’ Fee: With each currency’s account type, after depositing the coins, the funds on the address will be collected to the hot wallet address and the blockchain network. Part of the main chain blockchain transaction will consume the miner fee and the cost of which will be borne by the client. The client can contact us if they would like this capital expenditure will be handled by us;
 
-b) Miner's fee: Miner's fee (in some currencies) shall be borne by the three parties when withdrawing coins to the address of non-ChainUP Custody and using the block chain network. This part of capital expenditure can be viewed directly in the coin withdrawal order;
+b) Miner's fee: Miner's fee (in some currencies) shall be borne by the three parties when withdrawing coins to the address of non-ChainUP Custody and using the blockchain network. This part of capital expenditure can be viewed directly in the coin withdrawal order;
 
 c) Distribution fee: temporarily not charged.
