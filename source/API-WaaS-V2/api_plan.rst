@@ -65,7 +65,7 @@ Complete personal verification and google authentication. (For security level 2,
 2.1 Login to the ChainUP Custody platform
 ~~~~~~~~~~~~~~~~~~~
 
-Open ChainUP Custody platform (waas.chainup.com or custody.chainup.com) using any browser, scan the QR code and log in using the [TopValue] app or by scanning the QR code.
+Open ChainUP Custody platform (waas.chainup.com or custody.chainup.com) using any browser, scan the QR code,and log in using the [TopValue] app or by scanning the QR code.
 
 .. image:: images/api_plan_saomadenglu.png
    :width: 800px
@@ -133,7 +133,7 @@ Support online and offline signing
 3.2 Payment
 ~~~~~~~~~~~~~~~~~~~
 
-Subscription payment for system, installation and other costs. (Specific type of fees are subjected based on client’s contract)
+Subscription payment for system, installation, and other costs. (Specific types of fees are subjected based on client’s contract)
 
 
 4.Usage
