@@ -157,7 +157,7 @@ check_sum    String      required      Random check code. The third party return
 
 
 
-:响应示例:
+:Example response:
 
 ::
 
