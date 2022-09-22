@@ -1,7 +1,7 @@
 II. Access Guide
 ====================
 
-Follow the instructions below to access ChainUP Custody 
+Follow the instructions below to access ChainUp Custody 
 
 .. image:: images/api_plan_jieruzhiyin2.png
    :width: 800px
@@ -11,7 +11,7 @@ Follow the instructions below to access ChainUP Custody
 1.Create an account
 -------------------
 
-1.1 Download TopValue wallet
+1.1 Download Custody wallet
 ~~~~~~~~~~~~~~~~~~~
 
 Method 1：Open the link in your mobile browser：https://custody.chainup.com/appDownload/
@@ -25,7 +25,7 @@ Method 2：Use WeChat to scan the QR code for download:
 
 
 
-1.2 Register a TopValue Account
+1.2 Register a Custody Account
 ~~~~~~~~~~~~~~~~~~~
 Open the app and register a new account using email and mobile phone number.
 
@@ -62,10 +62,10 @@ Complete personal verification and google authentication. (For security level 2,
 2.Create and configure a corporate wallet
 -------------------
 
-2.1 Login to the ChainUP Custody platform
+2.1 Login to the ChainUp Custody platform
 ~~~~~~~~~~~~~~~~~~~
 
-Open ChainUP Custody platform (waas.chainup.com or custody.chainup.com) using any browser, scan the QR code,and log in using the [TopValue] app or by scanning the QR code.
+Open ChainUp Custody platform (waas.chainup.com or custody.chainup.com) using any browser, scan the QR code,and log in using the [Custody] app or by scanning the QR code.
 
 .. image:: images/api_plan_saomadenglu.png
    :width: 800px
@@ -75,7 +75,7 @@ Open ChainUP Custody platform (waas.chainup.com or custody.chainup.com) using an
 2.2 Create a wallet
 ~~~~~~~~~~~~~~~~~~~
 
-Enter the 【ChainUP Custody】 page and create a wallet. Please fill in the name carefully because you are unable to change the name once the wallet has been created.
+Enter the 【ChainUp Custody】 page and create a wallet. Please fill in the name carefully because you are unable to change the name once the wallet has been created.
 
 .. image:: images/api_plan_chuangjianqianbao1.png
    :width: 800px
