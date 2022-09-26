@@ -2,9 +2,9 @@
 Custody WAPI Documentation
 ==============================================
 
-Welcome to the TopValue asset custody platform. This document is used by the third-party technical team to add the self-developed mainchain to the ChainUP Custody for alliance members.
+Welcome to the TopValue asset custody platform. This document is used by the third-party technical team to add the self-developed mainchain to the ChainUp Custody for alliance members.
 
-Note: How to use WAPI to access the mainchain, the server and private keys are kept by the third-party technical team, and the ChainUP Custody is not responsible for the security of assets. Therefore, the third-party technical team must establish a complete wallet private key custody system and API private key custody system
+Note: How to use WAPI to access the mainchain, the server and private keys are kept by the third-party technical team, and the ChainUp Custody is not responsible for the security of assets. Therefore, the third-party technical team must establish a complete wallet private key custody system and API private key custody system
 
 .. toctree::
    :maxdepth: 3
