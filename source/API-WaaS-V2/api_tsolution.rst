@@ -107,6 +107,6 @@ Note: In the Custody system, there are three kinds of cost expenses in the tripa
 
 a) Collection of Miners’ Fee: With each currency’s account type, after depositing the coins, the funds on the address will be collected to the hot wallet address and the blockchain network. Part of the main chain blockchain transaction will consume the miner fee and the cost of which will be borne by the client. The client can contact us if they would like this capital expenditure will be handled by us;
 
-b) Miner's fee: Miner's fee (in some currencies) shall be borne by the three parties when withdrawing coins to the address of non-ChainUP Custody and using the blockchain network. This part of capital expenditure can be viewed directly in the coin withdrawal order;
+b) Miner's fee: Miner's fee (in some currencies) shall be borne by the three parties when withdrawing coins to the address of non-ChainUp Custody and using the blockchain network. This part of capital expenditure can be viewed directly in the coin withdrawal order;
 
 c) Distribution fee: temporarily not charged.
