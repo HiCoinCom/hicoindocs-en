@@ -9,7 +9,7 @@ The Role of Public and Private Keys
 
 Party A is a third-party public chain docking party
 
-Party B is the ChainUP Custody BaaS Cloud
+Party B is the ChainUp Custody BaaS Cloud
 
 **The Role of Public and Private Keys**： Party A needs to generate a pair of public and private keys in advance when registering the WAPI interface. The public key (rsa_third_pub) is provided to Party B. The private key is kept by yourself, and the private key is not disclosed to anyone. When requesting WAPI services, Party A shall encrypt the request parameters with Party B's public key and sign the original data after MD5 with Party A's private key. Upon receiving the request, Party B shall decrypt the data with Party B's private key and check the original data after MD5 with Party A's public key
 
