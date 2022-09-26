@@ -1,7 +1,7 @@
 III. Docking Solutions
 ====================
 
-In order to allow public chain developers to access the ChainUP Custody more conveniently and quickly, we provide BaaS services to meet the public chain docking needs. Based on the docking experience of past customers, the platform has sorted out a set of docking solutions. details as follows:
+In order to allow public chain developers to access the ChainUp Custody more conveniently and quickly, we provide BaaS services to meet the public chain docking needs. Based on the docking experience of past customers, the platform has sorted out a set of docking solutions. details as follows:
 
 The whole Process is divided into three steps：
 
