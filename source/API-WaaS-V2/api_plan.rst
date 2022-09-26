@@ -52,6 +52,11 @@ Open the user center - [Not Verified], enter the Person Verification page
 .. image:: images/api_plan_shezhi4.png
    :width: 180px
    :align: center
+   
+   
+.. image:: images/api_plan_shezhi5.png
+   :width: 180px
+   :align: center
 
 Complete personal verification and google authentication. (For security level 2, please kindly contact customer support for verification)
 
