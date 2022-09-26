@@ -1,7 +1,7 @@
 V. API Documentation
 ======================
 
-To meet the diverse business needs of customers, ChainUP Custody supports two docking methods: SDK and API;
+To meet the diverse business needs of customers, ChainUp Custody supports two docking methods: SDK and API;
 
 **SDK**：Support for Java、PHP and node
 
