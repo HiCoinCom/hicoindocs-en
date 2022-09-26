@@ -48,6 +48,7 @@ Open the user center - [Not Verified], enter the Person Verification page
    :width: 180px
    :align: center
 
+Authentication information, only one identity is supported and does not support replacement after authentication
 
 .. image:: images/api_plan_shezhi4.png
    :width: 180px
