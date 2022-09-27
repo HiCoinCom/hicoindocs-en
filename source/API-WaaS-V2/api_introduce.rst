@@ -17,3 +17,7 @@ I、Overview
 -------------------
 
   ChainUp Custody aims to build an open bank in the blockchain field by building a global financial clearing system across the main chain and relevant projects within a shared network which helps to reduce cost and improve asset utilization. 
+
+.. image:: images/yuanjing.jpg
+   :width: 600px
+   :align: center
