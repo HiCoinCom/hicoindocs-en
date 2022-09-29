@@ -14,7 +14,7 @@ Follow the instructions below to access ChainUp Custody
 1.1 Download Custody wallet
 ~~~~~~~~~~~~~~~~~~~
 
-Method 1：Open the link in your mobile browser：https://custody.chainup.com/appDownload/
+Method 1：Open the link in your mobile browser：https://custody.chainup.com/download
 
 Method 2：Use WeChat to scan the QR code for download:
 
