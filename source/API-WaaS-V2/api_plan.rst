@@ -71,7 +71,7 @@ Complete personal verification and google authentication. (For security level 2,
 2.1 Login to the ChainUp Custody platform
 ~~~~~~~~~~~~~~~~~~~
 
-Open ChainUp Custody platform (waas.chainup.com or custody.chainup.com) using any browser, scan the QR code,and log in using the [Custody] app or by scanning the QR code.
+Open ChainUp Custody platform (custody.chainup.com) using any browser, scan the QR code,and log in using the [Custody] app or by scanning the QR code.
 
 .. image:: images/api_plan_saomadenglu.png
    :width: 800px
