@@ -198,7 +198,7 @@ created_at       Long     required   create time, timestamp
 updated_at       Long     required   change time, timestamp
 txid             String   required   blockchain transaction ID
 confirmations    int      required   number of blockchain confirmations
-address_from          String     required    Recharge source address
+address_from     String   required   Recharge source address
 address_to       String   required   depositing account address
 status           int      required   0 to be confirmed, 1 success, 2 failed, 4 pending KYT verification, 5 pending manual review (KYT risk level too high), 6 Pending manual review (KYT Deposit Circuit Breaker)
 =============== ========= ========== ====================================================
