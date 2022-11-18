@@ -2,6 +2,9 @@ Get the address
 ==================
 
 
+Please note that the default number of registered users is 50,000. If the number of users exceeds the upper limit, please contact the relevant operation personnel for assistance.
+
+
 User Mobile Registration
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
